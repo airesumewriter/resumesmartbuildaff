@@ -10,8 +10,11 @@
 </head>
 <body>
   <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>ResumeSmartBuild</h2>
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <h2>ResumeSmartBuild</h2>
+      <span class="gamify-icon" title="Earn points & unlock badges">🎓</span>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="#">AI Tools</a>
@@ -19,6 +22,9 @@
       <a href="#">Contact</a>
     </nav>
   </aside>
+
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
   <!-- Main content -->
   <main class="content">
@@ -58,7 +64,6 @@
     <section class="sponsored">
       <h2>Sponsored</h2>
       <div class="ad-slot">
-        <!-- AdSense ad block -->
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-1651565176095013"
@@ -79,6 +84,13 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1651565176095013" crossorigin="anonymous"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <!-- Sidebar toggle script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
   </script>
 </body>
 </html>
