@@ -3,210 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ResumeSmartBuild – Smarter Resumes. Smarter Careers.</title>
-  
-  <!-- SEO -->
-  <meta name="description" content="Smarter resumes with AI. Build, scan, and optimize your resume to land more interviews with ResumeSmartBuild." />
-  <link rel="canonical" href="https://resumesmartbuild.com/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="ResumeSmartBuild – Smarter Resumes. Smarter Careers." />
-  <meta property="og:description" content="AI-powered resume tools, templates, and guides to help you get hired." />
-  <meta property="og:image" content="/public/assets/og-image.png" />
-  <meta property="og:url" content="https://resumesmartbuild.com/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Google AdSense Verification -->
-  <meta name="google-adsense-account" content="ca-pub-1651565176095013">
-
-  <!-- AdSense Auto Ads -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1651565176095013" crossorigin="anonymous"></script>
-
-  <!-- Styles -->
-  <style>
-    :root {
-      --primary: #FF6A00;
-      --secondary: #FF8C42;
-      --accent: #D84315;
-      --bg: #0F1724;
-      --text: #FFFFFF;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .cta-btn {
-      background: var(--accent);
-      color: #fff;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    form {
-      margin-top: 2rem;
-    }
-    input[type="email"] {
-      padding: 0.8rem;
-      width: 250px;
-      border: none;
-      border-radius: 8px;
-      margin-right: 0.5rem;
-    }
-    .ads {
-      margin: 2rem auto;
-      text-align: center;
-    }
-    .content {
-      display: flex;
-      padding: 2rem;
-      gap: 2rem;
-    }
-    .articles {
-      flex: 3;
-    }
-    .sidebar {
-      flex: 1;
-      background: #1e2738;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    footer {
-      background: #111827;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
-      color: #bbb;
-    }
-    /* Confirmation Modal */
-    #confirmationModal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    #confirmationModal .modal-content {
-      background: #fff;
-      color: #000;
-      padding: 2rem;
-      border-radius: 10px;
-      text-align: center;
-      max-width: 400px;
-    }
-  </style>
+  <meta name="description" content="ResumeSmartBuild - Smarter Resumes. Smarter Careers. Build, optimize, and grow your career with AI-powered resume tools, guides, and templates." />
+  <meta name="google-adsense-account" content="ca-pub-1651565176095013" />
+  <title>ResumeSmartBuild</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>ResumeSmartBuild</h1>
-    <p>Smarter Resumes. Smarter Careers.</p>
-  </header>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>ResumeSmartBuild</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">AI Tools</a>
+      <a href="articles/index.html">Articles</a>
+      <a href="#">Contact</a>
+    </nav>
+  </aside>
 
-  <!-- Leaderboard Ad Slot -->
-  <div class="ads">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-1651565176095013"
-         data-ad-slot="1234567890"
-         data-ad-format="horizontal"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
+  <!-- Main content -->
+  <main class="content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Smarter Resumes. Smarter Careers.</h1>
+      <p>Build your resume the smart way. Get your free 12-step checklist and optimize with AI-powered tools.</p>
+      <form class="email-form">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Get Checklist</button>
+      </form>
+    </section>
 
-  <section class="hero">
-    <h2>Build Your Resume the Smart Way</h2>
-    <p>Get your free 12-step resume checklist and optimize your resume with AI.</p>
-    <form id="signupForm" action="/subscribe" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required />
-      <button type="submit" class="cta-btn">Get Checklist</button>
-    </form>
-  </section>
+    <!-- Articles Preview -->
+    <section class="articles">
+      <h2>Latest Articles</h2>
+      <div class="article-grid">
+        <article>
+          <img src="https://via.placeholder.com/300x180" alt="Article 1" />
+          <h3><a href="articles/index.html">How to Beat the ATS in 2025</a></h3>
+          <p>Learn proven strategies to make your resume stand out.</p>
+        </article>
+        <article>
+          <img src="https://via.placeholder.com/300x180" alt="Article 2" />
+          <h3><a href="articles/index.html">Top 10 Resume Mistakes</a></h3>
+          <p>Avoid these mistakes and get noticed faster by recruiters.</p>
+        </article>
+        <article>
+          <img src="https://via.placeholder.com/300x180" alt="Article 3" />
+          <h3><a href="articles/index.html">AI Resume Tools That Work</a></h3>
+          <p>The best free and paid tools to power up your career.</p>
+        </article>
+      </div>
+    </section>
 
-  <!-- In-Article Ad Slot -->
-  <div class="ads">
-    <ins class="adsbygoogle"
-         style="display:block; text-align:center;"
-         data-ad-client="ca-pub-1651565176095013"
-         data-ad-slot="2345678901"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
+    <!-- Sponsored / Affiliate Section -->
+    <section class="sponsored">
+      <h2>Sponsored</h2>
+      <div class="ad-slot">
+        <!-- AdSense ad block -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1651565176095013"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </section>
 
-  <section class="content">
-    <div class="articles">
-      <h3>Latest Articles</h3>
-      <p>[SEO-optimized articles will be listed here]</p>
-    </div>
-    <aside class="sidebar">
-      <h4>Sponsored</h4>
-      <!-- Sidebar Ad Slot -->
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-1651565176095013"
-           data-ad-slot="3456789012"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </aside>
-  </section>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 ResumeSmartBuild. All Rights Reserved.</p>
+      <a href="mailto:george.tolin84@gmail.com">george.tolin84@gmail.com</a>
+    </footer>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 ResumeSmartBuild. All Rights Reserved.</p>
-    <!-- Footer Ad Slot -->
-    <div class="ads">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-1651565176095013"
-           data-ad-slot="4567890123"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-  </footer>
-
-  <!-- Confirmation Modal -->
-  <div id="confirmationModal">
-    <div class="modal-content">
-      <h2>🎉 Success!</h2>
-      <p>Thanks for signing up. Check your inbox for your free Resume Checklist PDF.</p>
-      <button onclick="closeModal()" class="cta-btn">Got It</button>
-    </div>
-  </div>
-
-  <!-- Scripts -->
+  <!-- Google Ads script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1651565176095013" crossorigin="anonymous"></script>
   <script>
-    const form = document.getElementById('signupForm');
-    const modal = document.getElementById('confirmationModal');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      modal.style.display = 'flex';
-      // Here you’d normally send the form via fetch() to your backend
-    });
-    function closeModal() {
-      modal.style.display = 'none';
-    }
+    (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </body>
 </html>
