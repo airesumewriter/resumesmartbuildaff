@@ -1,228 +1,419 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  display: flex;
-  min-height: 100vh;
-  background: #f4f6f9;
-  color: #333;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 220px;
-  background: #1a2a40;
-  color: #fff;
-  padding: 20px;
-  position: fixed;
-  height: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.sidebar .brand {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.sidebar h2 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  color: #4da6ff;
-}
-
-.gamify-icon {
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.gamify-icon:hover {
-  transform: scale(1.2);
-}
-
-.sidebar nav a {
-  display: block;
-  margin: 10px 0;
-  text-decoration: none;
-  color: #fff;
-  transition: 0.3s;
-}
-
-.sidebar nav a:hover {
-  color: #4da6ff;
-}
-
-/* Sidebar collapsed (mobile) */
-.sidebar.open {
-  transform: translateX(0);
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-    position: fixed;
-    z-index: 999;
+<!DOCTYPE html>
+<html ⚡ lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to Beat the ATS in 2025: Proven Resume Strategies That Get You Noticed</title>
+  <link rel="canonical" href="https://resumesmartbuild.com/articles/beat-ats-2025.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="description" content="Learn how to beat ATS in 2025 with proven resume strategies for keyword optimization, formatting, and recruiter appeal.">
+  <meta name="keywords" content="ATS resume 2025, beat ATS, resume optimization, keyword strategy, resume formatting, job search tips, ATS-friendly resume, resume writing guide, resume for AI screening, resume tips 2025">
+  <meta name="google-adsense-account" content="ca-pub-1651565176095013">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Beat the ATS in 2025: Proven Resume Strategies That Get You Noticed",
+    "author": { "@type": "Person", "name": "ResumeSmartBuild Team" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ResumeSmartBuild",
+      "logo": { "@type": "ImageObject", "url": "https://resumesmartbuild.com/logo.png" }
+    },
+    "datePublished": "2025-09-06",
+    "image": "https://via.placeholder.com/800x400/2563eb/ffffff?text=Beat+ATS+2025",
+    "description": "Learn how to beat ATS in 2025 with proven resume strategies for keyword optimization, formatting, and recruiter appeal."
   }
-}
+  </script>
+  <style amp-custom>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Menu Toggle Button */
-.menu-toggle {
-  display: none;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  background: #1a2a40;
-  color: #fff;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 4px;
-  font-size: 1.4rem;
-  cursor: pointer;
-  z-index: 1000;
-}
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0;
+    }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-}
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    }
 
-/* Main Content */
-.content {
-  margin-left: 220px;
-  padding: 20px 40px;
-  flex: 1;
-}
+    /* Header */
+    .article-header {
+      background: linear-gradient(135deg, #1a2a40 0%, #2c3e50 100%);
+      color: #fff;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
 
-@media (max-width: 768px) {
-  .content {
-    margin-left: 0;
-    padding: 20px;
-  }
-}
+    .article-header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+      color: #fff;
+    }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #4da6ff, #00509e);
-  color: #fff;
-  padding: 60px;
-  border-radius: 12px;
-  text-align: center;
-  margin-bottom: 40px;
-}
+    .article-meta {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
+    }
 
-.hero h1 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
+    /* Content */
+    .article-content {
+      padding: 2rem;
+    }
 
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
+    /* Typography */
+    h2 {
+      font-size: 1.8rem;
+      margin: 2.5rem 0 1.2rem 0;
+      color: #1a2a40;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #eaecef;
+    }
 
-.email-form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+    h3 {
+      font-size: 1.4rem;
+      margin: 2rem 0 1rem 0;
+      color: #2c3e50;
+    }
 
-.email-form input {
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  width: 280px;
-}
+    p {
+      margin: 1.2rem 0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
 
-.email-form button {
-  background: #1a2a40;
-  color: #fff;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    /* Images */
+    amp-img {
+      margin: 1.8rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #eaecef;
+    }
 
-.email-form button:hover {
-  background: #333;
-}
+    .image-caption {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      margin: -0.5rem 0 2rem 0;
+      font-size: 0.95rem;
+    }
 
-@media (max-width: 500px) {
-  .email-form {
-    flex-direction: column;
-    gap: 10px;
-  }
+    /* Lists */
+    ul, ol {
+      margin: 1.2rem 0;
+      padding-left: 2rem;
+    }
 
-  .email-form input {
-    width: 100%;
-  }
-}
+    li {
+      margin: 0.7rem 0;
+      line-height: 1.6;
+    }
 
-/* Articles Section */
-.articles {
-  margin-bottom: 40px;
-}
+    /* Blockquotes */
+    blockquote {
+      border-left: 4px solid #4da6ff;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      background: #f8f9fa;
+      border-radius: 0 6px 6px 0;
+    }
 
-.articles h2 {
-  margin-bottom: 20px;
-  color: #00509e;
-}
+    /* Tip Boxes */
+    .tip-box {
+      background: #e8f4ff;
+      border-left: 4px solid #4da6ff;
+      padding: 1.2rem;
+      margin: 1.8rem 0;
+      border-radius: 0 6px 6px 0;
+    }
 
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
+    .tip-title {
+      font-weight: bold;
+      color: #1a2a40;
+      margin-bottom: 0.5rem;
+      display: block;
+      font-size: 1.1rem;
+    }
 
-.article-grid article {
-  background: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
+    /* Conclusion Section */
+    .conclusion {
+      background: linear-gradient(to right, #f8f9fa, #e8f4ff);
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2.5rem 0;
+      border-left: 4px solid #4da6ff;
+    }
 
-.article-grid article:hover {
-  transform: translateY(-4px);
-}
+    /* Share Buttons */
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2.5rem 0;
+    }
 
-.article-grid img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+    /* Ad Placeholders */
+    .ad-slot {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      margin: 2rem 0;
+      border: 1px dashed #ccc;
+    }
 
-.article-grid h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
+    .ad-label {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
 
-/* Sponsored */
-.sponsored h2 {
-  margin-bottom: 10px;
-  color: #00509e;
-}
+    /* GDPR Consent */
+    .gdpr-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+      font-size: 0.95rem;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-.ad-slot {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+    .gdpr-consent button {
+      background: #1a2a40;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 15px;
+      transition: background 0.3s;
+    }
 
-/* Footer */
-footer {
-  margin-top: 40px;
-  text-align: center;
-  padding: 20px 0;
-  color: #555;
-  font-size: 0.9rem;
-}
+    .gdpr-consent button:hover {
+      background: #2c3e50;
+    }
+
+    /* Footer */
+    .article-footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 2rem 0;
+      color: #666;
+      font-size: 0.95rem;
+      border-top: 1px solid #eaecef;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .article-header {
+        padding: 1.8rem 1.5rem;
+      }
+      
+      .article-header h1 {
+        font-size: 1.9rem;
+      }
+      
+      .article-content {
+        padding: 1.5rem;
+      }
+      
+      .article-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      h3 {
+        font-size: 1.3rem;
+      }
+      
+      .gdpr-consent {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .gdpr-consent button {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .article-header h1 {
+        font-size: 1.7rem;
+      }
+      
+      .article-content {
+        padding: 1.2rem;
+      }
+      
+      .share-buttons {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-1651565176095013"></amp-auto-ads>
+
+  <div class="container">
+    <header class="article-header">
+      <h1>How to Beat the ATS in 2025: Proven Resume Strategies That Get You Noticed</h1>
+      <div class="article-meta">
+        <span>By ResumeSmartBuild Team</span>
+        <span>September 6, 2025</span>
+        <span>8 min read</span>
+      </div>
+    </header>
+
+    <div class="article-content">
+      <!-- Featured Image -->
+      <amp-img src="https://via.placeholder.com/800x400/2563eb/ffffff?text=Beat+ATS+2025" width="800" height="400" layout="responsive" alt="Beat the ATS in 2025 - Resume Optimization"></amp-img>
+      <p class="image-caption">Optimize your resume to pass through ATS filters and impress hiring managers</p>
+
+      <p>In today's hyper-competitive job market, your resume isn't just being judged by hiring managers—it's being scanned, sorted, and scored by Applicant Tracking Systems (ATS). These digital gatekeepers filter out over 75% of resumes before a human ever sees them. If you want to land interviews in 2025, you must learn how to beat the bots.</p>
+
+      <p>This guide reveals proven strategies to craft an ATS-friendly resume that not only passes automated screening but also impresses recruiters. Whether you're a recent graduate or a seasoned professional, these tips will help you stand out.</p>
+
+      <div class="share-buttons">
+        <amp-social-share type="twitter" width="45" height="33"></amp-social-share>
+        <amp-social-share type="linkedin" width="45" height="33"></amp-social-share>
+        <amp-social-share type="facebook" width="45" height="33" data-param-app_id="254325784911610"></amp-social-share>
+        <amp-social-share type="email" width="45" height="33"></amp-social-share>
+      </div>
+
+      <!-- Ad placeholder -->
+      <div class="ad-slot">
+        <div class="ad-label">Advertisement</div>
+        <amp-ad width="100vw" height="320"
+            type="adsense"
+            data-ad-client="ca-pub-1651565176095013"
+            data-ad-slot="1234567890"
+            data-auto-format="rspv"
+            data-full-width>
+          <div overflow></div>
+        </amp-ad>
+      </div>
+
+      <h2>What Is an ATS and Why It Matters in 2025</h2>
+      <amp-img src="https://via.placeholder.com/800x450/1e40af/ffffff?text=ATS+System+Process" width="800" height="450" layout="responsive" alt="ATS System Process Flowchart"></amp-img>
+      <p class="image-caption">Modern ATS systems use AI to parse and rank applicant resumes</p>
+      
+      <p>An Applicant Tracking System is software used by companies to manage the flood of job applications. It scans resumes for keywords, formats, and qualifications that match the job description. In 2025, 98% of Fortune 500 companies and most mid-sized firms rely on ATS technology.</p>
+      <p>Modern ATS tools use AI and natural language processing to interpret context, making it essential to write resumes that are both machine-readable and human-friendly.</p>
+
+      <h2>Step-by-Step Guide to Beating the ATS in 2025</h2>
+
+      <h3>1. Use the Right Resume Format</h3>
+      <amp-img src="https://via.placeholder.com/800x450/3b82f6/ffffff?text=Resume+Formats+Comparison" width="800" height="450" layout="responsive" alt="Comparison of Resume Formats"></amp-img>
+      <p class="image-caption">The reverse chronological format is most ATS-friendly</p>
+      
+      <p>The reverse chronological format is the gold standard for ATS compatibility. It lists your most recent job first and is preferred by 99% of recruiters.</p>
+      <p><strong>Avoid:</strong></p>
+      <ul>
+        <li>Functional resumes (confuse ATS parsing)</li>
+        <li>Hybrid formats with complex layouts</li>
+        <li>Tables, columns, or graphics</li>
+      </ul>
+      <p><strong>Recommended Structure:</strong></p>
+      <ul>
+        <li>Contact Information (not in headers/footers)</li>
+        <li>Professional Summary</li>
+        <li>Core Competencies/Skills</li>
+        <li>Work Experience</li>
+        <li>Education</li>
+        <li>Certifications/Awards</li>
+      </ul>
+
+      <h3>2. Optimize for Keywords (Without Stuffing)</h3>
+      <amp-img src="https://via.placeholder.com/800x450/2563eb/ffffff?text=Keyword+Optimization" width="800" height="450" layout="responsive" alt="Resume Keyword Optimization Example"></amp-img>
+      <p class="image-caption">Strategic keyword placement improves ATS ranking without appearing spammy</p>
+      
+      <p>ATS systems scan for exact keyword matches from job descriptions. Use tools like job posting analyzers or resume parsers to identify relevant terms.</p>
+      <p><strong>Keyword Placement Strategy:</strong></p>
+      <ul>
+        <li>Professional Summary: 3–5 high-priority keywords</li>
+        <li>Skills Section: 8–12 technical and soft skills</li>
+        <li>Work Experience: 2–3 keywords per job</li>
+        <li>Education/Certifications: Exact names and acronyms</li>
+      </ul>
+      
+      <div class="tip-box">
+        <span class="tip-title">Pro Tip:</span>
+        Use both full terms and abbreviations (e.g., "Search Engine Optimization (SEO)").
+      </div>
+
+      <!-- Additional content would continue here -->
+
+      <div class="conclusion">
+        <h2>Final Thoughts: Beat the Bots, Impress the Humans</h2>
+        <p>In 2025, beating the ATS is no longer optional—it's essential. But remember, your resume must also appeal to human recruiters. The key is balance: clean formatting, strategic keyword use, and compelling storytelling.</p>
+        <p>By following these strategies, you'll dramatically increase your chances of landing interviews and securing your next opportunity.</p>
+      </div>
+
+      <div class="share-buttons">
+        <amp-social-share type="twitter" width="45" height="33"></amp-social-share>
+        <amp-social-share type="linkedin" width="45" height="33"></amp-social-share>
+        <amp-social-share type="facebook" width="45" height="33" data-param-app_id="254325784911610"></amp-social-share>
+        <amp-social-share type="email" width="45" height="33"></amp-social-share>
+      </div>
+    </div>
+
+    <footer class="article-footer">
+      <p>&copy; 2025 ResumeSmartBuild. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <div class="gdpr-consent" id="gdpr-consent">
+    This website uses cookies to ensure you get the best experience. 
+    <button on="tap:gdpr-consent.hide">Accept</button>
+  </div>
+
+  <amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": { "account": "496747961" },
+      "triggers": {
+        "trackPageview": { "on": "visible", "request": "pageview" }
+      }
+    }
+    </script>
+  </amp-analytics>
+
+</body>
+</html>
