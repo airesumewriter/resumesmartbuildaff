@@ -79,7 +79,7 @@
       color: white;
     }
 
-    /* Sidebar */
+    /* Sidebar - Fixed to show by default on desktop */
     .sidebar {
       width: 250px;
       background: #1a2a40;
@@ -88,14 +88,9 @@
       height: 100%;
       position: fixed;
       z-index: 1000;
-      transform: translateX(-250px);
-      transition: transform 0.3s ease-in-out;
       top: 0;
       left: 0;
-    }
-
-    .sidebar[open] {
-      transform: translateX(0);
+      transform: translateX(0); /* Changed from -250px to 0 */
     }
 
     .sidebar-header {
@@ -118,6 +113,7 @@
       color: white;
       font-size: 1.5rem;
       cursor: pointer;
+      display: none; /* Hidden on desktop */
     }
 
     .sidebar nav {
@@ -145,8 +141,9 @@
       font-size: 1.2rem;
     }
 
-    /* Menu Toggle Button */
+    /* Menu Toggle Button - Hidden on desktop */
     .menu-toggle {
+      display: none;
       background: none;
       border: none;
       color: white;
@@ -157,16 +154,14 @@
 
     /* Main Content */
     .content {
+      margin-left: 250px; /* Account for sidebar */
       padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+      max-width: 1200px; /* Increased max-width */
     }
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(135deg, #4da6ff, #00509e);
       color: #fff;
       padding: 60px 20px;
       border-radius: 12px;
@@ -218,7 +213,7 @@
       background: #2c3e50;
     }
 
-    /* Articles Grid */
+    /* Articles Section */
     .articles {
       margin-bottom: 40px;
     }
@@ -232,7 +227,7 @@
 
     .article-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
       gap: 25px;
     }
 
@@ -331,45 +326,48 @@
     }
 
     /* Responsive Design */
-    @media (min-width: 768px) {
-      .content {
-        padding: 40px;
-      }
-      
-      .header {
-        padding: 1rem 2rem;
-      }
-      
-      .email-form {
-        flex-direction: row;
-      }
-      
+    @media (max-width: 1024px) {
       .article-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
       }
     }
 
-    @media (min-width: 1024px) {
+    @media (max-width: 768px) {
       .sidebar {
-        transform: translateX(0);
-        position: fixed;
+        transform: translateX(-250px); /* Hidden on mobile */
       }
       
-      .content {
-        margin-left: 250px;
-        padding: 2rem 3rem;
+      .sidebar[open] {
+        transform: translateX(0); /* Shown when toggled */
+      }
+      
+      .close-sidebar {
+        display: block; /* Show close button on mobile */
       }
       
       .menu-toggle {
-        display: none;
+        display: block; /* Show menu toggle on mobile */
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1001;
+      }
+      
+      .content {
+        margin-left: 0;
+        padding: 20px;
       }
       
       .header {
-        padding-left: 270px;
+        padding: 1rem;
+      }
+      
+      .email-form {
+        flex-direction: column;
       }
       
       .article-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr; /* 1 column on mobile */
       }
     }
   </style>
@@ -387,7 +385,7 @@
     </div>
   </header>
 
-  <!-- Sidebar Navigation -->
+  <!-- Sidebar Navigation - Now visible by default on desktop -->
   <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="left">
     <div class="sidebar-header">
       <div class="sidebar-title">ResumeSmartBuild</div>
@@ -431,7 +429,7 @@
       </form>
     </section>
 
-    <!-- Articles Preview -->
+    <!-- Articles Preview - Now with 6 articles -->
     <section class="articles">
       <h2>Latest Articles</h2>
       <div class="article-grid">
@@ -456,6 +454,30 @@
           <div class="article-content">
             <h3><a href="#">AI Resume Tools That Work</a></h3>
             <p>The best free and paid tools to power up your career.</p>
+            <a href="#" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article>
+          <amp-img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Resume Formatting"></amp-img>
+          <div class="article-content">
+            <h3><a href="#">Perfect Resume Formatting</a></h3>
+            <p>Learn the best formatting practices for modern resumes that get results.</p>
+            <a href="#" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article>
+          <amp-img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Cover Letters"></amp-img>
+          <div class="article-content">
+            <h3><a href="#">Writing Effective Cover Letters</a></h3>
+            <p>How to write cover letters that complement your resume and increase your chances.</p>
+            <a href="#" class="read-more">Read more →</a>
+          </div>
+        </article>
+        <article>
+          <amp-img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Job Interview"></amp-img>
+          <div class="article-content">
+            <h3><a href="#">Ace Your Job Interview</a></h3>
+            <p>Preparation strategies and tips to excel in your next job interview.</p>
             <a href="#" class="read-more">Read more →</a>
           </div>
         </article>
