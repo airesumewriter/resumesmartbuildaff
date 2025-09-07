@@ -1,16 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ⚡ lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Career articles and guides from ResumeSmartBuild. Learn how to optimize your resume, use AI tools, and land your dream job." />
   <meta name="google-adsense-account" content="ca-pub-1651565176095013" />
   <title>Articles - ResumeSmartBuild</title>
-  <link rel="stylesheet" href="../style.css" />
+  
+  <!-- AMP Boilerplate -->
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  
+  <!-- AMP Components -->
+  <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Career Articles - ResumeSmartBuild",
+    "description": "Expert advice, resume strategies, and AI-powered career tips.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ResumeSmartBuild",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://resumesmartbuild.com/assets/logo.png"
+      }
+    }
+  }
+  </script>
+  
+  <style amp-custom>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #1a2a40;
+      color: #fff;
+      padding: 20px;
+      height: 100%;
+      position: fixed;
+      z-index: 1000;
+      transform: translateX(-220px);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar[open] {
+      transform: translateX(0);
+    }
+
+    .sidebar h2 {
+      font-size: 1.4rem;
+      color: #4da6ff;
+      margin-bottom: 25px;
+    }
+
+    .sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 0;
+      transition: color 0.3s;
+    }
+
+    .sidebar nav a:hover {
+      color: #4da6ff;
+    }
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: #1a2a40;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* Main Content */
+    .content {
+      margin-left: 0;
+      padding: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #4da6ff, #00509e);
+      color: #fff;
+      padding: 40px 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero.small-hero {
+      padding: 30px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+    }
+
+    /* Articles Section */
+    .articles {
+      margin-bottom: 40px;
+    }
+
+    .full-article {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      transition: transform 0.3s;
+    }
+
+    .full-article:hover {
+      transform: translateY(-4px);
+    }
+
+    .full-article h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #1a2a40;
+    }
+
+    .full-article p {
+      margin-bottom: 10px;
+    }
+
+    .full-article p em {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Sponsored Section */
+    .sponsored {
+      margin-bottom: 40px;
+    }
+
+    .sponsored h2 {
+      margin-bottom: 15px;
+      color: #00509e;
+      font-size: 1.8rem;
+    }
+
+    .ad-slot {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #4da6ff;
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .content {
+        padding: 40px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .sidebar {
+        transform: translateX(0);
+        position: fixed;
+      }
+      
+      .content {
+        margin-left: 220px;
+      }
+      
+      .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- AMP Auto Ads -->
+  <amp-auto-ads type="adsense" data-ad-client="ca-pub-1651565176095013"></amp-auto-ads>
+
   <!-- Sidebar -->
-  <aside class="sidebar">
+  <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay">
     <h2>ResumeSmartBuild</h2>
     <nav>
       <a href="../index.html">Home</a>
@@ -18,7 +235,10 @@
       <a href="index.html">Articles</a>
       <a href="#">Contact</a>
     </nav>
-  </aside>
+  </amp-sidebar>
+
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" on="tap:sidebar.toggle">☰</button>
 
   <!-- Main content -->
   <main class="content">
@@ -33,18 +253,21 @@
         <h2>How to Beat the ATS in 2025</h2>
         <p><em>Published on Sept 6, 2025</em></p>
         <p>Your resume has to pass ATS filters before it even reaches human eyes. Learn how to format correctly, use the right keywords, and leverage AI optimization to beat the system.</p>
+        <p><a href="beat-ats-2025.html">Read more →</a></p>
       </article>
 
       <article class="full-article">
         <h2>Top 10 Resume Mistakes to Avoid</h2>
         <p><em>Published on Sept 6, 2025</em></p>
-        <p>Recruiters spend just 7 seconds scanning a resume. Don’t lose your shot by making these common mistakes. We break them down and offer fixes for each one.</p>
+        <p>Recruiters spend just 7 seconds scanning a resume. Don't lose your shot by making these common mistakes. We break them down and offer fixes for each one.</p>
+        <p><a href="#">Read more →</a></p>
       </article>
 
       <article class="full-article">
         <h2>AI Resume Tools That Actually Work</h2>
         <p><em>Published on Sept 6, 2025</em></p>
         <p>The resume software landscape is crowded. We tested the top AI-powered tools to find out which ones actually help you land interviews.</p>
+        <p><a href="#">Read more →</a></p>
       </article>
     </section>
 
@@ -52,12 +275,14 @@
     <section class="sponsored">
       <h2>Sponsored</h2>
       <div class="ad-slot">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-1651565176095013"
-             data-ad-slot="9876543210"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
+        <amp-ad width="100vw" height="320"
+            type="adsense"
+            data-ad-client="ca-pub-1651565176095013"
+            data-ad-slot="9876543210"
+            data-auto-format="rspv"
+            data-full-width>
+          <div overflow></div>
+        </amp-ad>
       </div>
     </section>
 
@@ -68,10 +293,21 @@
     </footer>
   </main>
 
-  <!-- Google Ads script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1651565176095013" crossorigin="anonymous"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+  <!-- Google Analytics -->
+  <amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-496747961"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
+    }
+    </script>
+  </amp-analytics>
 </body>
 </html>
