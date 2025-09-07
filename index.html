@@ -18,14 +18,14 @@
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
   <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 
-  <!-- Structured Data (SEO Schema) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ResumeSmartBuild",
     "url": "https://resumesmartbuild.com",
-    "logo": "https://resumesmartbuild.com/assets/logo.png",
+    "logo": "https://resumesmartbuild.com/images/logo.png",
     "sameAs": [
       "https://www.linkedin.com/company/resumesmartbuild",
       "https://twitter.com/resumesmartbuild"
@@ -48,37 +48,76 @@
       line-height: 1.7;
     }
 
+    /* Header */
+    .header {
+      background: #1a2a40;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      font-size: 1.8rem;
+      color: #4da6ff;
+    }
+
+    .brand-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+    }
+
     /* Sidebar */
     .sidebar {
-      width: 220px;
+      width: 250px;
       background: #1a2a40;
       color: #fff;
       padding: 20px;
       height: 100%;
       position: fixed;
       z-index: 1000;
-      transform: translateX(-220px);
+      transform: translateX(-250px);
       transition: transform 0.3s ease-in-out;
+      top: 0;
+      left: 0;
     }
 
     .sidebar[open] {
       transform: translateX(0);
     }
 
-    .sidebar .brand {
+    .sidebar-header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      margin-bottom: 25px;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #2c3e50;
     }
 
-    .sidebar h2 {
+    .sidebar-title {
       font-size: 1.4rem;
       color: #4da6ff;
     }
 
-    .gamify-icon {
+    .close-sidebar {
+      background: none;
+      border: none;
+      color: white;
       font-size: 1.5rem;
+      cursor: pointer;
     }
 
     .sidebar nav {
@@ -90,122 +129,141 @@
     .sidebar nav a {
       color: #fff;
       text-decoration: none;
-      padding: 8px 0;
-      transition: color 0.3s;
+      padding: 12px 15px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .sidebar nav a:hover {
-      color: #4da6ff;
+      background: #2c3e50;
+    }
+
+    .nav-icon {
+      font-size: 1.2rem;
     }
 
     /* Menu Toggle Button */
     .menu-toggle {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      background: #1a2a40;
-      color: #fff;
+      background: none;
       border: none;
-      padding: 10px 14px;
-      border-radius: 4px;
-      font-size: 1.4rem;
+      color: white;
+      font-size: 1.5rem;
       cursor: pointer;
-      z-index: 1001;
+      padding: 5px;
     }
 
     /* Main Content */
     .content {
-      margin-left: 0;
       padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, #4da6ff, #00509e);
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
       color: #fff;
-      padding: 40px 20px;
+      padding: 60px 20px;
       border-radius: 12px;
       text-align: center;
       margin-bottom: 40px;
     }
 
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 25px;
     }
 
+    /* Email Form */
     .email-form {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-width: 400px;
+      max-width: 500px;
       margin: 0 auto;
     }
 
     .email-form input {
-      padding: 12px;
+      padding: 15px;
       border-radius: 6px;
       border: none;
       width: 100%;
+      font-size: 1rem;
     }
 
     .email-form button {
       background: #1a2a40;
       color: #fff;
       border: none;
-      padding: 12px 18px;
+      padding: 15px 25px;
       border-radius: 6px;
       cursor: pointer;
       transition: background 0.3s;
+      font-size: 1rem;
+      font-weight: 600;
     }
 
     .email-form button:hover {
       background: #2c3e50;
     }
 
-    /* Articles Section */
+    /* Articles Grid */
     .articles {
       margin-bottom: 40px;
     }
 
     .articles h2 {
-      margin-bottom: 20px;
-      color: #00509e;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      color: #1a2a40;
+      margin-bottom: 25px;
+      text-align: center;
     }
 
     .article-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 25px;
     }
 
     .article-grid article {
       background: #fff;
       border-radius: 10px;
-      padding: 20px;
+      padding: 0;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
     }
 
     .article-grid article:hover {
       transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     .article-grid amp-img {
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .article-content {
+      padding: 20px;
     }
 
     .article-grid h3 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-bottom: 10px;
+      color: #1a2a40;
     }
 
     .article-grid h3 a {
@@ -217,6 +275,22 @@
       color: #4da6ff;
     }
 
+    .article-grid p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .read-more {
+      display: inline-block;
+      color: #4da6ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
     /* Sponsored Section */
     .sponsored {
       margin-bottom: 40px;
@@ -226,6 +300,7 @@
       margin-bottom: 15px;
       color: #00509e;
       font-size: 1.8rem;
+      text-align: center;
     }
 
     .ad-slot {
@@ -239,9 +314,11 @@
     /* Footer */
     footer {
       text-align: center;
-      padding: 20px 0;
+      padding: 30px 0;
       color: #555;
       font-size: 0.9rem;
+      border-top: 1px solid #eaecef;
+      margin-top: 40px;
     }
 
     footer a {
@@ -249,11 +326,18 @@
       text-decoration: none;
     }
 
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     /* Responsive Design */
     @media (min-width: 768px) {
       .content {
-        margin-left: 0;
         padding: 40px;
+      }
+      
+      .header {
+        padding: 1rem 2rem;
       }
       
       .email-form {
@@ -272,11 +356,16 @@
       }
       
       .content {
-        margin-left: 220px;
+        margin-left: 250px;
+        padding: 2rem 3rem;
       }
       
       .menu-toggle {
         display: none;
+      }
+      
+      .header {
+        padding-left: 270px;
       }
       
       .article-grid {
@@ -289,22 +378,36 @@
   <!-- AMP Auto Ads -->
   <amp-auto-ads type="adsense" data-ad-client="ca-pub-1651565176095013"></amp-auto-ads>
 
-  <!-- Sidebar -->
-  <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay">
+  <!-- Header with Branding -->
+  <header class="header">
     <div class="brand">
-      <h2>ResumeSmartBuild</h2>
-      <span class="gamify-icon" title="Earn points & unlock badges">🎓</span>
+      <button class="menu-toggle" on="tap:sidebar.toggle">☰</button>
+      <span class="brand-icon">🎓</span>
+      <span class="brand-text">ResumeSmartBuild</span>
+    </div>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="left">
+    <div class="sidebar-header">
+      <div class="sidebar-title">ResumeSmartBuild</div>
+      <button class="close-sidebar" on="tap:sidebar.toggle">✕</button>
     </div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="#">AI Tools</a>
-      <a href="articles/index.html">Articles</a>
-      <a href="#">Contact</a>
+      <a href="index.html">
+        <span class="nav-icon">🏠</span> Home
+      </a>
+      <a href="#">
+        <span class="nav-icon">🤖</span> AI Tools
+      </a>
+      <a href="articles/index.html">
+        <span class="nav-icon">📚</span> Articles
+      </a>
+      <a href="#">
+        <span class="nav-icon">📞</span> Contact
+      </a>
     </nav>
   </amp-sidebar>
-
-  <!-- Mobile Menu Toggle -->
-  <button class="menu-toggle" on="tap:sidebar.toggle">☰</button>
 
   <!-- Main content -->
   <main class="content">
@@ -333,19 +436,28 @@
       <h2>Latest Articles</h2>
       <div class="article-grid">
         <article>
-          <amp-img src="https://via.placeholder.com/300x180/2563eb/ffffff?text=Beat+ATS+2025" width="300" height="180" layout="responsive" alt="Beat ATS 2025"></amp-img>
-          <h3><a href="articles/beat-ats-2025.html">How to Beat the ATS in 2025</a></h3>
-          <p>Learn proven strategies to make your resume stand out and pass Applicant Tracking Systems.</p>
+          <amp-img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Beat ATS 2025"></amp-img>
+          <div class="article-content">
+            <h3><a href="articles/beat-ats-2025.html">How to Beat the ATS in 2025</a></h3>
+            <p>Learn proven strategies to make your resume stand out and pass Applicant Tracking Systems.</p>
+            <a href="articles/beat-ats-2025.html" class="read-more">Read more →</a>
+          </div>
         </article>
         <article>
-          <amp-img src="https://via.placeholder.com/300x180/1e40af/ffffff?text=Resume+Mistakes" width="300" height="180" layout="responsive" alt="Top Resume Mistakes"></amp-img>
-          <h3><a href="articles/index.html">Top 10 Resume Mistakes</a></h3>
-          <p>Avoid these mistakes and get noticed faster by recruiters.</p>
+          <amp-img src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Top Resume Mistakes"></amp-img>
+          <div class="article-content">
+            <h3><a href="#">Top 10 Resume Mistakes</a></h3>
+            <p>Avoid these mistakes and get noticed faster by recruiters.</p>
+            <a href="#" class="read-more">Read more →</a>
+          </div>
         </article>
         <article>
-          <amp-img src="https://via.placeholder.com/300x180/3b82f6/ffffff?text=AI+Tools" width="300" height="180" layout="responsive" alt="AI Resume Tools"></amp-img>
-          <h3><a href="articles/index.html">AI Resume Tools That Work</a></h3>
-          <p>The best free and paid tools to power up your career.</p>
+          <amp-img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="AI Resume Tools"></amp-img>
+          <div class="article-content">
+            <h3><a href="#">AI Resume Tools That Work</a></h3>
+            <p>The best free and paid tools to power up your career.</p>
+            <a href="#" class="read-more">Read more →</a>
+          </div>
         </article>
       </div>
     </section>
@@ -364,13 +476,13 @@
         </amp-ad>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>© 2025 ResumeSmartBuild. All Rights Reserved.</p>
-      <a href="mailto:george.tolin84@gmail.com">george.tolin84@gmail.com</a>
-    </footer>
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ResumeSmartBuild. All Rights Reserved.</p>
+    <a href="mailto:george.tolin84@gmail.com">george.tolin84@gmail.com</a>
+  </footer>
 
   <!-- Google Analytics -->
   <amp-analytics type="googleanalytics">
