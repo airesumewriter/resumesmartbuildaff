@@ -9,6 +9,14 @@
   <meta name="keywords" content="ATS resume 2025, beat ATS, resume optimization, keyword strategy, resume formatting, job search tips, ATS-friendly resume, resume writing guide, resume for AI screening, resume tips 2025">
   <meta name="google-adsense-account" content="ca-pub-1651565176095013">
 
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KRBZMGL9');</script>
+  <!-- End Google Tag Manager -->
+
   <!-- AMP Boilerplate -->
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -84,7 +92,7 @@
       color: white;
     }
 
-    /* Sidebar */
+    /* Sidebar - Fixed to show by default on desktop */
     .sidebar {
       width: 250px;
       background: #1a2a40;
@@ -93,14 +101,9 @@
       height: 100%;
       position: fixed;
       z-index: 1000;
-      transform: translateX(-250px);
-      transition: transform 0.3s ease-in-out;
       top: 0;
       left: 0;
-    }
-
-    .sidebar[open] {
-      transform: translateX(0);
+      transform: translateX(0); /* Changed from -250px to show by default */
     }
 
     .sidebar-header {
@@ -123,6 +126,7 @@
       color: white;
       font-size: 1.5rem;
       cursor: pointer;
+      display: none; /* Hidden on desktop */
     }
 
     .sidebar nav {
@@ -150,8 +154,9 @@
       font-size: 1.2rem;
     }
 
-    /* Menu Toggle Button */
+    /* Menu Toggle Button - Hidden on desktop */
     .menu-toggle {
+      display: none;
       background: none;
       border: none;
       color: white;
@@ -162,6 +167,7 @@
 
     /* Main Content */
     .content {
+      margin-left: 250px; /* Account for sidebar */
       padding: 20px;
       max-width: 1000px;
       margin: 0 auto;
@@ -285,6 +291,205 @@
       margin: 2.5rem 0;
     }
 
+    /* Affiliate Section */
+    .affiliate-section {
+      background: linear-gradient(to right, #f8f9fa, #eef2ff);
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    
+    .affiliate-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    
+    .affiliate-badge {
+      background: #1dbf73;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    
+    .affiliate-title {
+      font-size: 1.4rem;
+      color: #1a2a40;
+      margin: 0;
+    }
+    
+    .affiliate-button {
+      display: inline-block;
+      background: #1dbf73;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+    
+    .affiliate-button:hover {
+      background: #19a463;
+    }
+
+    /* Article Navigation */
+    .article-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid #eaecef;
+      border-bottom: 1px solid #eaecef;
+    }
+
+    .nav-button {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #1a2a40;
+      transition: background 0.3s;
+      max-width: 45%;
+    }
+
+    .nav-button:hover {
+      background: #e8f4ff;
+    }
+
+    .nav-button.prev {
+      text-align: left;
+    }
+
+    .nav-button.next {
+      text-align: right;
+      margin-left: auto;
+    }
+
+    .nav-button .arrow {
+      font-size: 1.2rem;
+      margin: 0 10px;
+    }
+
+    .nav-button .nav-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-button .nav-direction {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .nav-button .nav-title {
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* Read Next Section */
+    .read-next {
+      margin: 3rem 0;
+    }
+
+    .read-next h2 {
+      font-size: 1.8rem;
+      color: #1a2a40;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .read-next-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .read-next-article {
+      background: #fff;
+      border-radius: 10px;
+      padding: 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+    }
+
+    .read-next-article:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .read-next-article amp-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .read-next-content {
+      padding: 20px;
+    }
+
+    .read-next-article h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #1a2a40;
+    }
+
+    .read-next-article h3 a {
+      color: #1a2a40;
+      text-decoration: none;
+    }
+
+    .read-next-article h3 a:hover {
+      color: #4da6ff;
+    }
+
+    .read-next-article p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .read-next-more {
+      display: inline-block;
+      color: #4da6ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .read-next-more:hover {
+      text-decoration: underline;
+    }
+
+    /* Home Button */
+    .home-button {
+      display: inline-block;
+      background: #4da6ff;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin: 2rem 0;
+      transition: background 0.3s;
+      text-align: center;
+    }
+
+    .home-button:hover {
+      background: #3b82f6;
+    }
+
+    .button-container {
+      text-align: center;
+    }
+
     /* Sponsored Section */
     .sponsored {
       margin-bottom: 40px;
@@ -325,20 +530,53 @@
     }
 
     /* Responsive Design */
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-250px); /* Hidden on mobile */
+      }
+      
+      .sidebar[open] {
+        transform: translateX(0); /* Shown when toggled */
+      }
+      
+      .close-sidebar {
+        display: block; /* Show close button on mobile */
+      }
+      
+      .menu-toggle {
+        display: block; /* Show menu toggle on mobile */
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1001;
+      }
+      
       .content {
-        padding: 40px;
+        margin-left: 0;
+        padding: 20px;
       }
       
       .header {
-        padding: 1rem 2rem;
+        padding: 1rem;
+      }
+
+      .article-navigation {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-button {
+        max-width: 100%;
+      }
+
+      .read-next-grid {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (min-width: 1024px) {
       .sidebar {
-        transform: translateX(0);
-        position: fixed;
+        transform: translateX(0); /* Always visible on desktop */
       }
       
       .content {
@@ -353,10 +591,19 @@
       .header {
         padding-left: 270px;
       }
+
+      .read-next-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRBZMGL9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- AMP Auto Ads -->
   <amp-auto-ads type="adsense" data-ad-client="ca-pub-1651565176095013"></amp-auto-ads>
 
@@ -369,7 +616,7 @@
     </div>
   </header>
 
-  <!-- Sidebar Navigation -->
+  <!-- Sidebar Navigation - Now visible by default on desktop -->
   <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="left">
     <div class="sidebar-header">
       <div class="sidebar-title">ResumeSmartBuild</div>
@@ -493,7 +740,7 @@
       <p><strong>Formatting Tips:</strong></p>
       <ul>
         <li>Use bullet points or pipes (|) to separate skills</li>
-        <li>Include skill levels (e.g., Expert, Intermediate)</li>
+        <li>Include skill levels (e.e., Expert, Intermediate)</li>
         <li>Group related skills for readability</li>
       </ul>
 
@@ -548,13 +795,60 @@
           Explore Fiverr Resume Services
         </a>
       </div>
-      
+
+      <!-- Article Navigation -->
+      <div class="article-navigation">
+        <a href="previous-article.html" class="nav-button prev">
+          <span class="arrow">←</span>
+          <span class="nav-text">
+            <span class="nav-direction">Previous Article</span>
+            <span class="nav-title">Top 10 Resume Mistakes to Avoid</span>
+          </span>
+        </a>
+        
+        <a href="next-article.html" class="nav-button next">
+          <span class="nav-text">
+            <span class="nav-direction">Next Article</span>
+            <span class="nav-title">AI Resume Tools That Actually Work</span>
+          </span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
 
       <div class="share-buttons">
         <amp-social-share type="twitter" width="45" height="33"></amp-social-share>
         <amp-social-share type="linkedin" width="45" height="33"></amp-social-share>
         <amp-social-share type="facebook" width="45" height="33" data-param-app_id="254325784911610"></amp-social-share>
         <amp-social-share type="email" width="45" height="33"></amp-social-share>
+      </div>
+
+      <!-- Read Next Section -->
+      <div class="read-next">
+        <h2>Read Next</h2>
+        <div class="read-next-grid">
+          <article class="read-next-article">
+            <amp-img src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Top Resume Mistakes"></amp-img>
+            <div class="read-next-content">
+              <h3><a href="#">Top 10 Resume Mistakes to Avoid</a></h3>
+              <p>Recruiters spend just 7 seconds scanning a resume. Don't lose your shot by making these common mistakes.</p>
+              <a href="#" class="read-next-more">Read more →</a>
+            </div>
+          </article>
+          
+          <article class="read-next-article">
+            <amp-img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="AI Resume Tools"></amp-img>
+            <div class="read-next-content">
+              <h3><a href="#">AI Resume Tools That Actually Work</a></h3>
+              <p>The resume software landscape is crowded. We tested the top AI-powered tools to find out which ones actually help.</p>
+              <a href="#" class="read-next-more">Read more →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Home Button -->
+      <div class="button-container">
+        <a href="../index.html" class="home-button">← Back to Home</a>
       </div>
     </div>
 
