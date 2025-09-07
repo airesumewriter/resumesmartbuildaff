@@ -29,7 +29,7 @@
       "name": "ResumeSmartBuild",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://resumesmartbuild.com/assets/logo.png"
+        "url": "https://resumesmartbuild.com/images/logo.png"
       }
     }
   }
@@ -50,27 +50,76 @@
       line-height: 1.7;
     }
 
+    /* Header */
+    .header {
+      background: #1a2a40;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      font-size: 1.8rem;
+      color: #4da6ff;
+    }
+
+    .brand-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+    }
+
     /* Sidebar */
     .sidebar {
-      width: 220px;
+      width: 250px;
       background: #1a2a40;
       color: #fff;
       padding: 20px;
       height: 100%;
       position: fixed;
       z-index: 1000;
-      transform: translateX(-220px);
+      transform: translateX(-250px);
       transition: transform 0.3s ease-in-out;
+      top: 0;
+      left: 0;
     }
 
     .sidebar[open] {
       transform: translateX(0);
     }
 
-    .sidebar h2 {
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #2c3e50;
+    }
+
+    .sidebar-title {
       font-size: 1.4rem;
       color: #4da6ff;
-      margin-bottom: 25px;
+    }
+
+    .close-sidebar {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     .sidebar nav {
@@ -82,38 +131,44 @@
     .sidebar nav a {
       color: #fff;
       text-decoration: none;
-      padding: 8px 0;
-      transition: color 0.3s;
+      padding: 12px 15px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .sidebar nav a:hover {
-      color: #4da6ff;
+      background: #2c3e50;
+    }
+
+    .nav-icon {
+      font-size: 1.2rem;
     }
 
     /* Menu Toggle Button */
     .menu-toggle {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      background: #1a2a40;
-      color: #fff;
+      background: none;
       border: none;
-      padding: 10px 14px;
-      border-radius: 4px;
-      font-size: 1.4rem;
+      color: white;
+      font-size: 1.5rem;
       cursor: pointer;
-      z-index: 1001;
+      padding: 5px;
     }
 
     /* Main Content */
     .content {
-      margin-left: 0;
       padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, #4da6ff, #00509e);
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
       color: #fff;
       padding: 40px 20px;
       border-radius: 12px;
@@ -126,12 +181,13 @@
     }
 
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 15px;
     }
 
     .hero p {
       font-size: 1.1rem;
+      opacity: 0.9;
     }
 
     /* Articles Section */
@@ -145,26 +201,41 @@
       padding: 25px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       margin-bottom: 25px;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-left: 4px solid #4da6ff;
     }
 
     .full-article:hover {
       transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     .full-article h2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-bottom: 10px;
       color: #1a2a40;
     }
 
     .full-article p {
       margin-bottom: 10px;
+      color: #555;
     }
 
     .full-article p em {
-      color: #666;
+      color: #777;
       font-size: 0.9rem;
+    }
+
+    .article-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #4da6ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .article-link:hover {
+      text-decoration: underline;
     }
 
     /* Sponsored Section */
@@ -176,6 +247,7 @@
       margin-bottom: 15px;
       color: #00509e;
       font-size: 1.8rem;
+      text-align: center;
     }
 
     .ad-slot {
@@ -189,9 +261,11 @@
     /* Footer */
     footer {
       text-align: center;
-      padding: 20px 0;
+      padding: 30px 0;
       color: #555;
       font-size: 0.9rem;
+      border-top: 1px solid #eaecef;
+      margin-top: 40px;
     }
 
     footer a {
@@ -199,10 +273,18 @@
       text-decoration: none;
     }
 
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     /* Responsive Design */
     @media (min-width: 768px) {
       .content {
         padding: 40px;
+      }
+      
+      .header {
+        padding: 1rem 2rem;
       }
     }
 
@@ -213,11 +295,16 @@
       }
       
       .content {
-        margin-left: 220px;
+        margin-left: 250px;
+        padding: 2rem 3rem;
       }
       
       .menu-toggle {
         display: none;
+      }
+      
+      .header {
+        padding-left: 270px;
       }
     }
   </style>
@@ -226,19 +313,36 @@
   <!-- AMP Auto Ads -->
   <amp-auto-ads type="adsense" data-ad-client="ca-pub-1651565176095013"></amp-auto-ads>
 
-  <!-- Sidebar -->
-  <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay">
-    <h2>ResumeSmartBuild</h2>
+  <!-- Header with Branding -->
+  <header class="header">
+    <div class="brand">
+      <button class="menu-toggle" on="tap:sidebar.toggle">☰</button>
+      <span class="brand-icon">🎓</span>
+      <span class="brand-text">ResumeSmartBuild</span>
+    </div>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="left">
+    <div class="sidebar-header">
+      <div class="sidebar-title">ResumeSmartBuild</div>
+      <button class="close-sidebar" on="tap:sidebar.toggle">✕</button>
+    </div>
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="#">AI Tools</a>
-      <a href="index.html">Articles</a>
-      <a href="#">Contact</a>
+      <a href="../index.html">
+        <span class="nav-icon">🏠</span> Home
+      </a>
+      <a href="#">
+        <span class="nav-icon">🤖</span> AI Tools
+      </a>
+      <a href="index.html">
+        <span class="nav-icon">📚</span> Articles
+      </a>
+      <a href="#">
+        <span class="nav-icon">📞</span> Contact
+      </a>
     </nav>
   </amp-sidebar>
-
-  <!-- Mobile Menu Toggle -->
-  <button class="menu-toggle" on="tap:sidebar.toggle">☰</button>
 
   <!-- Main content -->
   <main class="content">
@@ -253,21 +357,35 @@
         <h2>How to Beat the ATS in 2025</h2>
         <p><em>Published on Sept 6, 2025</em></p>
         <p>Your resume has to pass ATS filters before it even reaches human eyes. Learn how to format correctly, use the right keywords, and leverage AI optimization to beat the system.</p>
-        <p><a href="beat-ats-2025.html">Read more →</a></p>
+        <a href="beat-ats-2025.html" class="article-link">Read full article →</a>
       </article>
 
       <article class="full-article">
         <h2>Top 10 Resume Mistakes to Avoid</h2>
         <p><em>Published on Sept 6, 2025</em></p>
         <p>Recruiters spend just 7 seconds scanning a resume. Don't lose your shot by making these common mistakes. We break them down and offer fixes for each one.</p>
-        <p><a href="#">Read more →</a></p>
+        <a href="#" class="article-link">Read full article →</a>
       </article>
 
       <article class="full-article">
         <h2>AI Resume Tools That Actually Work</h2>
         <p><em>Published on Sept 6, 2025</em></p>
         <p>The resume software landscape is crowded. We tested the top AI-powered tools to find out which ones actually help you land interviews.</p>
-        <p><a href="#">Read more →</a></p>
+        <a href="#" class="article-link">Read full article →</a>
+      </article>
+      
+      <article class="full-article">
+        <h2>How to Tailor Your Resume for Different Jobs</h2>
+        <p><em>Published on Sept 5, 2025</em></p>
+        <p>Learn the art of customizing your resume for each application without starting from scratch every time.</p>
+        <a href="#" class="article-link">Read full article →</a>
+      </article>
+      
+      <article class="full-article">
+        <h2>The Ultimate Cover Letter Guide for 2025</h2>
+        <p><em>Published on Sept 4, 2025</em></p>
+        <p>Cover letters still matter. Discover how to write one that complements your resume and increases your chances.</p>
+        <a href="#" class="article-link">Read full article →</a>
       </article>
     </section>
 
