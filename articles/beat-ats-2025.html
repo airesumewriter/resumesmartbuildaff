@@ -8,10 +8,19 @@
   <meta name="description" content="Learn how to beat ATS in 2025 with proven resume strategies for keyword optimization, formatting, and recruiter appeal.">
   <meta name="keywords" content="ATS resume 2025, beat ATS, resume optimization, keyword strategy, resume formatting, job search tips, ATS-friendly resume, resume writing guide, resume for AI screening, resume tips 2025">
   <meta name="google-adsense-account" content="ca-pub-1651565176095013">
+
+  <!-- AMP Boilerplate -->
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
+  
+  <!-- AMP Components -->
   <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -21,211 +30,381 @@
     "publisher": {
       "@type": "Organization",
       "name": "ResumeSmartBuild",
-      "logo": { "@type": "ImageObject", "url": "https://resumesmartbuild.com/logo.png" }
+      "logo": { "@type": "ImageObject", "url": "https://resumesmartbuild.com/images/logo.png" }
     },
     "datePublished": "2025-09-06",
-    "image": "https://via.placeholder.com/800x400/2563eb/ffffff?text=Beat+ATS+2025",
+    "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
     "description": "Learn how to beat ATS in 2025 with proven resume strategies for keyword optimization, formatting, and recruiter appeal."
   }
   </script>
+  
   <style amp-custom>
-    :root {
-      --primary-color: #2563eb;
-      --secondary-color: #1e40af;
-      --accent-color: #3b82f6;
-      --text-color: #1f2937;
-      --light-gray: #f3f4f6;
-      --medium-gray: #e5e7eb;
-      --dark-gray: #4b5563;
-      --white: #ffffff;
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      line-height: 1.7; 
-      margin: 0; 
-      padding: 0; 
-      background: var(--light-gray); 
-      color: var(--text-color); 
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.7;
     }
-    
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: var(--white);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+    /* Header */
+    .header {
+      background: #1a2a40;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      font-size: 1.8rem;
+      color: #4da6ff;
+    }
+
+    .brand-text {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #1a2a40;
+      color: #fff;
+      padding: 20px;
+      height: 100%;
+      position: fixed;
+      z-index: 1000;
+      transform: translateX(-250px);
+      transition: transform 0.3s ease-in-out;
+      top: 0;
+      left: 0;
+    }
+
+    .sidebar[open] {
+      transform: translateX(0);
+    }
+
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #2c3e50;
+    }
+
+    .sidebar-title {
+      font-size: 1.4rem;
+      color: #4da6ff;
+    }
+
+    .close-sidebar {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 15px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar nav a:hover {
+      background: #2c3e50;
+    }
+
+    .nav-icon {
+      font-size: 1.2rem;
+    }
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    /* Main Content */
     .content {
-      padding: 2rem;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    
-    header {
-      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-      color: var(--white);
-      padding: 2rem;
+
+    /* Article Header */
+    .article-header {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 40px 20px;
+      border-radius: 12px;
       text-align: center;
+      margin-bottom: 40px;
     }
-    
-    h1 { 
-      font-size: 2.2rem; 
-      margin: 0 0 1rem; 
-      line-height: 1.3;
+
+    .article-header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
     }
-    
-    .meta {
+
+    .article-meta {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       opacity: 0.9;
-      margin-top: 1rem;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
     }
-    
-    h2 { 
-      font-size: 1.7rem; 
-      margin-top: 2.5rem; 
-      color: var(--secondary-color);
+
+    /* Article Content */
+    .article-content {
+      margin-bottom: 40px;
+    }
+
+    .article-content h2 {
+      font-size: 1.8rem;
+      margin: 2.5rem 0 1.2rem 0;
+      color: #1a2a40;
       padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--medium-gray);
+      border-bottom: 2px solid #eaecef;
     }
-    
-    h3 { 
-      font-size: 1.3rem; 
-      margin-top: 1.8rem; 
-      color: var(--primary-color);
+
+    .article-content h3 {
+      font-size: 1.4rem;
+      margin: 2rem 0 1rem 0;
+      color: #2c3e50;
     }
-    
-    p { 
-      margin: 1.2rem 0; 
+
+    .article-content p {
+      margin: 1.2rem 0;
       font-size: 1.05rem;
+      line-height: 1.7;
     }
-    
-    ol, ul { 
-      margin: 1.2rem 0; 
-      padding-left: 1.8rem; 
-    }
-    
-    li { 
-      margin: 0.7rem 0; 
-    }
-    
-    amp-img {
+
+    .article-content amp-img {
       margin: 1.8rem 0;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border: 1px solid var(--medium-gray);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #eaecef;
     }
-    
+
     .image-caption {
       text-align: center;
       font-style: italic;
-      color: var(--dark-gray);
-      margin-top: -0.5rem;
-      margin-bottom: 2rem;
-      font-size: 0.9rem;
+      color: #666;
+      margin: -0.5rem 0 2rem 0;
+      font-size: 0.95rem;
     }
-    
-    blockquote {
-      border-left: 4px solid var(--accent-color);
-      padding-left: 1.5rem;
+
+    .article-content ul, .article-content ol {
+      margin: 1.2rem 0;
+      padding-left: 2rem;
+    }
+
+    .article-content li {
+      margin: 0.7rem 0;
+      line-height: 1.6;
+    }
+
+    .article-content blockquote {
+      border-left: 4px solid #4da6ff;
+      padding: 1.2rem 1.5rem;
       margin: 1.5rem 0;
       font-style: italic;
-      background: var(--light-gray);
-      padding: 1.5rem;
-      border-radius: 0 8px 8px 0;
+      background: #f8f9fa;
+      border-radius: 0 6px 6px 0;
     }
-    
+
     .tip-box {
-      background: #eef2ff;
-      border-left: 4px solid var(--accent-color);
+      background: #e8f4ff;
+      border-left: 4px solid #4da6ff;
       padding: 1.2rem;
-      margin: 1.5rem 0;
-      border-radius: 0 8px 8px 0;
+      margin: 1.8rem 0;
+      border-radius: 0 6px 6px 0;
     }
-    
+
     .tip-title {
       font-weight: bold;
-      color: var(--primary-color);
+      color: #1a2a40;
       margin-bottom: 0.5rem;
       display: block;
+      font-size: 1.1rem;
     }
-    
+
     .conclusion {
-      background: var(--light-gray);
-      padding: 1.8rem;
+      background: linear-gradient(to right, #f8f9fa, #e8f4ff);
+      padding: 2rem;
       border-radius: 8px;
       margin: 2.5rem 0;
+      border-left: 4px solid #4da6ff;
     }
-    
+
+    /* Share Buttons */
     .share-buttons {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      margin: 2rem 0;
+      margin: 2.5rem 0;
     }
-    
-    .gdpr-consent { 
-      position: fixed; 
-      bottom: 0; 
-      left: 0; 
-      right: 0; 
-      background: #fff; 
-      border-top: 1px solid #ddd; 
-      padding: 12px; 
-      text-align: center; 
-      font-size: 14px; 
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-      z-index: 1000;
+
+    /* Sponsored Section */
+    .sponsored {
+      margin-bottom: 40px;
     }
-    
-    .gdpr-consent button { 
-      background: var(--primary-color); 
-      color: #fff; 
-      border: none; 
-      padding: 8px 16px; 
-      margin-left: 10px; 
-      border-radius: 4px; 
-      cursor: pointer;
+
+    .sponsored h2 {
+      margin-bottom: 15px;
+      color: #00509e;
+      font-size: 1.8rem;
+      text-align: center;
     }
-    
-    @media (max-width: 600px) {
+
+    .ad-slot {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #eaecef;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #4da6ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
       .content {
-        padding: 1.5rem;
+        padding: 40px;
       }
       
-      h1 {
-        font-size: 1.8rem;
+      .header {
+        padding: 1rem 2rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .sidebar {
+        transform: translateX(0);
+        position: fixed;
       }
       
-      h2 {
-        font-size: 1.5rem;
+      .content {
+        margin-left: 250px;
+        padding: 2rem 3rem;
       }
       
-      .meta {
-        flex-direction: column;
-        gap: 0.5rem;
+      .menu-toggle {
+        display: none;
+      }
+      
+      .header {
+        padding-left: 270px;
       }
     }
   </style>
 </head>
 <body>
-
+  <!-- AMP Auto Ads -->
   <amp-auto-ads type="adsense" data-ad-client="ca-pub-1651565176095013"></amp-auto-ads>
 
-  <div class="container">
-    <header>
+  <!-- Header with Branding -->
+  <header class="header">
+    <div class="brand">
+      <button class="menu-toggle" on="tap:sidebar.toggle">☰</button>
+      <span class="brand-icon">🎓</span>
+      <span class="brand-text">ResumeSmartBuild</span>
+    </div>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="left">
+    <div class="sidebar-header">
+      <div class="sidebar-title">ResumeSmartBuild</div>
+      <button class="close-sidebar" on="tap:sidebar.toggle">✕</button>
+    </div>
+    <nav>
+      <a href="../index.html">
+        <span class="nav-icon">🏠</span> Home
+      </a>
+      <a href="#">
+        <span class="nav-icon">🤖</span> AI Tools
+      </a>
+      <a href="index.html">
+        <span class="nav-icon">📚</span> Articles
+      </a>
+      <a href="#">
+        <span class="nav-icon">📞</span> Contact
+      </a>
+    </nav>
+  </amp-sidebar>
+
+  <!-- Main content -->
+  <main class="content">
+    <header class="article-header">
       <h1>How to Beat the ATS in 2025: Proven Resume Strategies That Get You Noticed</h1>
-      <div class="meta">
+      <div class="article-meta">
         <span>By ResumeSmartBuild Team</span>
         <span>September 6, 2025</span>
         <span>8 min read</span>
       </div>
     </header>
 
-    <div class="content">
+    <div class="article-content">
       <!-- Featured Image -->
-      <amp-img src="https://via.placeholder.com/800x400/2563eb/ffffff?text=Beat+ATS+2025" width="800" height="400" layout="responsive" alt="Beat the ATS in 2025 - Resume Optimization"></amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="800" height="400" layout="responsive" alt="Beat the ATS in 2025 - Resume Optimization"></amp-img>
       <p class="image-caption">Optimize your resume to pass through ATS filters and impress hiring managers</p>
 
       <p>In today's hyper-competitive job market, your resume isn't just being judged by hiring managers—it's being scanned, sorted, and scored by Applicant Tracking Systems (ATS). These digital gatekeepers filter out over 75% of resumes before a human ever sees them. If you want to land interviews in 2025, you must learn how to beat the bots.</p>
@@ -240,7 +419,7 @@
       </div>
 
       <h2>What Is an ATS and Why It Matters in 2025</h2>
-      <amp-img src="https://via.placeholder.com/800x450/1e40af/ffffff?text=ATS+System+Process" width="800" height="450" layout="responsive" alt="ATS System Process Flowchart"></amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="800" height="450" layout="responsive" alt="ATS System Process Flowchart"></amp-img>
       <p class="image-caption">Modern ATS systems use AI to parse and rank applicant resumes</p>
       
       <p>An Applicant Tracking System is software used by companies to manage the flood of job applications. It scans resumes for keywords, formats, and qualifications that match the job description. In 2025, 98% of Fortune 500 companies and most mid-sized firms rely on ATS technology.</p>
@@ -249,7 +428,7 @@
       <h2>Step-by-Step Guide to Beating the ATS in 2025</h2>
 
       <h3>1. Use the Right Resume Format</h3>
-      <amp-img src="https://via.placeholder.com/800x450/3b82f6/ffffff?text=Resume+Formats+Comparison" width="800" height="450" layout="responsive" alt="Comparison of Resume Formats"></amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="800" height="450" layout="responsive" alt="Comparison of Resume Formats"></amp-img>
       <p class="image-caption">The reverse chronological format is most ATS-friendly</p>
       
       <p>The reverse chronological format is the gold standard for ATS compatibility. It lists your most recent job first and is preferred by 99% of recruiters.</p>
@@ -270,7 +449,7 @@
       </ul>
 
       <h3>2. Optimize for Keywords (Without Stuffing)</h3>
-      <amp-img src="https://via.placeholder.com/800x450/2563eb/ffffff?text=Keyword+Optimization" width="800" height="450" layout="responsive" alt="Resume Keyword Optimization Example"></amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="800" height="450" layout="responsive" alt="Resume Keyword Optimization Example"></amp-img>
       <p class="image-caption">Strategic keyword placement improves ATS ranking without appearing spammy</p>
       
       <p>ATS systems scan for exact keyword matches from job descriptions. Use tools like job posting analyzers or resume parsers to identify relevant terms.</p>
@@ -288,7 +467,7 @@
       </div>
 
       <h3>4. Build a Strategic Skills Section</h3>
-      <amp-img src="https://via.placeholder.com/800x450/1e40af/ffffff?text=Skills+Section+Example" width="800" height="450" layout="responsive" alt="Well-Organized Resume Skills Section"></amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="800" height="450" layout="responsive" alt="Well-Organized Resume Skills Section"></amp-img>
       <p class="image-caption">A well-organized skills section helps both ATS and human readers quickly identify your strengths</p>
       
       <p>Use a two-tiered approach:</p>
@@ -304,7 +483,7 @@
       </ul>
 
       <h3>5. Quantify Your Work Experience</h3>
-      <amp-img src="https://via.placeholder.com/800x450/3b82f6/ffffff?text=Quantifiable+Achievements" width="800" height="450" layout="responsive" alt="Quantifiable Achievements in Resume"></amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="800" height="450" layout="responsive" alt="Quantifiable Achievements in Resume"></amp-img>
       <p class="image-caption">Numbers and metrics make your achievements more impactful to both ATS and hiring managers</p>
       
       <p>Use the STAR method (Situation, Task, Action, Result) to write compelling bullet points.</p>
@@ -313,7 +492,7 @@
       <p><strong>Power Words to Use:</strong> Achieved, Led, Improved, Resolved, Generated</p>
 
       <h3>7. Customize for Each Job Application</h3>
-      <amp-img src="https://via.placeholder.com/800x450/2563eb/ffffff?text=Customize+Resume+For+Each+Job" width="800" height="450" layout="responsive" alt="Customizing Resume for Each Job Application"></amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="800" height="450" layout="responsive" alt="Customizing Resume for Each Job Application"></amp-img>
       <p class="image-caption">Tailoring your resume for each application significantly increases your chances</p>
       
       <p>Generic resumes don't work in 2025. Tailor your resume for each role by:</p>
@@ -329,7 +508,7 @@
       </div>
 
       <h3>10. Test Your Resume with ATS Tools</h3>
-      <amp-img src="https://via.placeholder.com/800x450/1e40af/ffffff?text=ATS+Testing+Tools" width="800" height="450" layout="responsive" alt="ATS Testing Tools for Resume"></amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="800" height="450" layout="responsive" alt="ATS Testing Tools for Resume"></amp-img>
       <p class="image-caption">Use ATS testing tools to identify and fix issues before submitting your application</p>
       
       <p>Use free tools like resume parsers or ATS checkers to validate your resume's compatibility. These tools scan for formatting issues, keyword gaps, and readability.</p>
@@ -347,23 +526,44 @@
         <amp-social-share type="email" width="45" height="33"></amp-social-share>
       </div>
     </div>
-  </div>
 
-  <div class="gdpr-consent" id="gdpr-consent">
-    This website uses cookies to ensure you get the best experience. 
-    <button on="tap:gdpr-consent.hide">Accept</button>
-  </div>
+    <!-- Ad block -->
+    <section class="sponsored">
+      <h2>Sponsored</h2>
+      <div class="ad-slot">
+        <amp-ad width="100vw" height="320"
+            type="adsense"
+            data-ad-client="ca-pub-1651565176095013"
+            data-ad-slot="9876543210"
+            data-auto-format="rspv"
+            data-full-width>
+          <div overflow></div>
+        </amp-ad>
+      </div>
+    </section>
+  </main>
 
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ResumeSmartBuild. All Rights Reserved.</p>
+    <a href="mailto:george.tolin84@gmail.com">george.tolin84@gmail.com</a>
+  </footer>
+
+  <!-- Google Analytics -->
   <amp-analytics type="googleanalytics">
     <script type="application/json">
     {
-      "vars": { "account": "496747961" },
+      "vars": {
+        "account": "UA-496747961"
+      },
       "triggers": {
-        "trackPageview": { "on": "visible", "request": "pageview" }
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
       }
     }
     </script>
   </amp-analytics>
-
 </body>
 </html>
