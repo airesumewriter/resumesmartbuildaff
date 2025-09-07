@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ⚡ lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ResumeSmartBuild - Smarter Resumes. Smarter Careers. Build, optimize, and grow your career with AI-powered resume tools, guides, and templates." />
   <meta name="google-adsense-account" content="ca-pub-1651565176095013" />
   <title>ResumeSmartBuild | Smarter Resumes. Smarter Careers.</title>
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- AMP Auto Ads -->
-  <script async custom-element="amp-auto-ads"
-    src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
-
-  <!-- Google Analytics (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-496747961"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-496747961');
-  </script>
+  
+  <!-- AMP Boilerplate -->
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  
+  <!-- AMP Components -->
+  <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 
   <!-- Structured Data (SEO Schema) -->
   <script type="application/ld+json">
@@ -35,13 +32,265 @@
     ]
   }
   </script>
+  
+  <style amp-custom>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #1a2a40;
+      color: #fff;
+      padding: 20px;
+      height: 100%;
+      position: fixed;
+      z-index: 1000;
+      transform: translateX(-220px);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar[open] {
+      transform: translateX(0);
+    }
+
+    .sidebar .brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.4rem;
+      color: #4da6ff;
+    }
+
+    .gamify-icon {
+      font-size: 1.5rem;
+    }
+
+    .sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 0;
+      transition: color 0.3s;
+    }
+
+    .sidebar nav a:hover {
+      color: #4da6ff;
+    }
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: #1a2a40;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* Main Content */
+    .content {
+      margin-left: 0;
+      padding: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #4da6ff, #00509e);
+      color: #fff;
+      padding: 40px 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .email-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .email-form input {
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      width: 100%;
+    }
+
+    .email-form button {
+      background: #1a2a40;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .email-form button:hover {
+      background: #2c3e50;
+    }
+
+    /* Articles Section */
+    .articles {
+      margin-bottom: 40px;
+    }
+
+    .articles h2 {
+      margin-bottom: 20px;
+      color: #00509e;
+      font-size: 1.8rem;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .article-grid article {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .article-grid article:hover {
+      transform: translateY(-4px);
+    }
+
+    .article-grid amp-img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .article-grid h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .article-grid h3 a {
+      color: #1a2a40;
+      text-decoration: none;
+    }
+
+    .article-grid h3 a:hover {
+      color: #4da6ff;
+    }
+
+    /* Sponsored Section */
+    .sponsored {
+      margin-bottom: 40px;
+    }
+
+    .sponsored h2 {
+      margin-bottom: 15px;
+      color: #00509e;
+      font-size: 1.8rem;
+    }
+
+    .ad-slot {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #4da6ff;
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .content {
+        margin-left: 0;
+        padding: 40px;
+      }
+      
+      .email-form {
+        flex-direction: row;
+      }
+      
+      .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .sidebar {
+        transform: translateX(0);
+        position: fixed;
+      }
+      
+      .content {
+        margin-left: 220px;
+      }
+      
+      .menu-toggle {
+        display: none;
+      }
+      
+      .article-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- AMP Auto Ads -->
   <amp-auto-ads type="adsense" data-ad-client="ca-pub-1651565176095013"></amp-auto-ads>
 
   <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
+  <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay">
     <div class="brand">
       <h2>ResumeSmartBuild</h2>
       <span class="gamify-icon" title="Earn points & unlock badges">🎓</span>
@@ -52,10 +301,10 @@
       <a href="articles/index.html">Articles</a>
       <a href="#">Contact</a>
     </nav>
-  </aside>
+  </amp-sidebar>
 
   <!-- Mobile Menu Toggle -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <button class="menu-toggle" on="tap:sidebar.toggle">☰</button>
 
   <!-- Main content -->
   <main class="content">
@@ -63,9 +312,19 @@
     <section class="hero">
       <h1>Smarter Resumes. Smarter Careers.</h1>
       <p>Build your resume the smart way. Get your free 12-step checklist and optimize with AI-powered tools.</p>
-      <form class="email-form">
-        <input type="email" placeholder="Enter your email" required />
+      <form class="email-form" method="post" action-xhr="https://example.com/subscribe" target="_top">
+        <input type="email" name="email" placeholder="Enter your email" required />
         <button type="submit">Get Checklist</button>
+        <div submit-success>
+          <template type="amp-mustache">
+            Success! Thanks for subscribing.
+          </template>
+        </div>
+        <div submit-error>
+          <template type="amp-mustache">
+            Error! Please try again.
+          </template>
+        </div>
       </form>
     </section>
 
@@ -74,17 +333,17 @@
       <h2>Latest Articles</h2>
       <div class="article-grid">
         <article>
-          <img src="assets/images/ats-2025-thumb.jpg" alt="Beat ATS 2025" />
+          <amp-img src="https://via.placeholder.com/300x180/2563eb/ffffff?text=Beat+ATS+2025" width="300" height="180" layout="responsive" alt="Beat ATS 2025"></amp-img>
           <h3><a href="articles/beat-ats-2025.html">How to Beat the ATS in 2025</a></h3>
           <p>Learn proven strategies to make your resume stand out and pass Applicant Tracking Systems.</p>
         </article>
         <article>
-          <img src="https://via.placeholder.com/300x180" alt="Top Resume Mistakes" />
+          <amp-img src="https://via.placeholder.com/300x180/1e40af/ffffff?text=Resume+Mistakes" width="300" height="180" layout="responsive" alt="Top Resume Mistakes"></amp-img>
           <h3><a href="articles/index.html">Top 10 Resume Mistakes</a></h3>
           <p>Avoid these mistakes and get noticed faster by recruiters.</p>
         </article>
         <article>
-          <img src="https://via.placeholder.com/300x180" alt="AI Resume Tools" />
+          <amp-img src="https://via.placeholder.com/300x180/3b82f6/ffffff?text=AI+Tools" width="300" height="180" layout="responsive" alt="AI Resume Tools"></amp-img>
           <h3><a href="articles/index.html">AI Resume Tools That Work</a></h3>
           <p>The best free and paid tools to power up your career.</p>
         </article>
@@ -95,12 +354,14 @@
     <section class="sponsored">
       <h2>Sponsored</h2>
       <div class="ad-slot">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-1651565176095013"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
+        <amp-ad width="100vw" height="320"
+            type="adsense"
+            data-ad-client="ca-pub-1651565176095013"
+            data-ad-slot="1234567890"
+            data-auto-format="rspv"
+            data-full-width>
+          <div overflow></div>
+        </amp-ad>
       </div>
     </section>
 
@@ -111,17 +372,21 @@
     </footer>
   </main>
 
-  <!-- Google Ads script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1651565176095013" crossorigin="anonymous"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-  <!-- Sidebar toggle script -->
-  <script>
-    function toggleMenu() {
-      document.getElementById("sidebar").classList.toggle("open");
+  <!-- Google Analytics -->
+  <amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-496747961"
+      },
+      "triggers": {
+        "trackPageview": {
+          "on": "visible",
+          "request": "pageview"
+        }
+      }
     }
-  </script>
+    </script>
+  </amp-analytics>
 </body>
 </html>
