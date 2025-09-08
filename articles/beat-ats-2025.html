@@ -163,6 +163,10 @@
       font-size: 1.5rem;
       cursor: pointer;
       padding: 5px;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1001;
     }
 
     /* Main Content */
@@ -529,14 +533,14 @@
       text-decoration: underline;
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
+    /* Responsive Design - FIXED NAVIGATION */
+    @media (max-width: 1023px) {
       .sidebar {
-        transform: translateX(-250px); /* Hidden on mobile */
+        transform: translateX(-250px); /* Hidden on mobile by default */
       }
       
       .sidebar[open] {
-        transform: translateX(0); /* Shown when toggled */
+        transform: translateX(0); /* Visible when toggled */
       }
       
       .close-sidebar {
@@ -545,10 +549,6 @@
       
       .menu-toggle {
         display: block; /* Show menu toggle on mobile */
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        z-index: 1001;
       }
       
       .content {
@@ -576,7 +576,7 @@
 
     @media (min-width: 1024px) {
       .sidebar {
-        transform: translateX(0); /* Always visible on desktop */
+        transform: translateX(0) !important; /* Always visible on desktop */
       }
       
       .content {
@@ -585,11 +585,11 @@
       }
       
       .menu-toggle {
-        display: none;
+        display: none; /* Hide menu toggle on desktop */
       }
       
       .header {
-        padding-left: 270px;
+        padding-left: 270px; /* Adjust header padding for sidebar */
       }
 
       .read-next-grid {
@@ -740,7 +740,7 @@
       <p><strong>Formatting Tips:</strong></p>
       <ul>
         <li>Use bullet points or pipes (|) to separate skills</li>
-        <li>Include skill levels (e.e., Expert, Intermediate)</li>
+        <li>Include skill levels (e.g., Expert, Intermediate)</li>
         <li>Group related skills for readability</li>
       </ul>
 
