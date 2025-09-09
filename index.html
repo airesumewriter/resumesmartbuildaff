@@ -79,8 +79,8 @@
       color: white;
     }
 
-    /* Sidebar - Fixed to show by default on desktop */
-    .sidebar {
+    /* Desktop Sidebar (always visible on desktop) */
+    .desktop-sidebar {
       width: 250px;
       background: #1a2a40;
       color: #fff;
@@ -90,10 +90,10 @@
       z-index: 1000;
       top: 0;
       left: 0;
-      transform: translateX(0); /* Changed from -250px to 0 */
+      display: block;
     }
 
-    .sidebar-header {
+    .desktop-sidebar .sidebar-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -102,27 +102,18 @@
       border-bottom: 1px solid #2c3e50;
     }
 
-    .sidebar-title {
+    .desktop-sidebar .sidebar-title {
       font-size: 1.4rem;
       color: #4da6ff;
     }
 
-    .close-sidebar {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-      display: none; /* Hidden on desktop */
-    }
-
-    .sidebar nav {
+    .desktop-sidebar nav {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
 
-    .sidebar nav a {
+    .desktop-sidebar nav a {
       color: #fff;
       text-decoration: none;
       padding: 12px 15px;
@@ -133,7 +124,64 @@
       gap: 10px;
     }
 
-    .sidebar nav a:hover {
+    .desktop-sidebar nav a:hover {
+      background: #2c3e50;
+    }
+
+    /* Mobile Sidebar (togglable) */
+    .mobile-sidebar {
+      width: 250px;
+      background: #1a2a40;
+      color: #fff;
+      padding: 20px;
+      height: 100%;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      transform: translateX(-250px);
+    }
+
+    .mobile-sidebar .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #2c3e50;
+    }
+
+    .mobile-sidebar .sidebar-title {
+      font-size: 1.4rem;
+      color: #4da6ff;
+    }
+
+    .mobile-sidebar .close-sidebar {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .mobile-sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .mobile-sidebar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 15px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mobile-sidebar nav a:hover {
       background: #2c3e50;
     }
 
@@ -141,7 +189,7 @@
       font-size: 1.2rem;
     }
 
-    /* Menu Toggle Button - Hidden on desktop */
+    /* Menu Toggle Button */
     .menu-toggle {
       display: none;
       background: none;
@@ -154,9 +202,9 @@
 
     /* Main Content */
     .content {
-      margin-left: 250px; /* Account for sidebar */
       padding: 20px;
-      max-width: 1200px; /* Increased max-width */
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     /* Hero Section */
@@ -227,7 +275,7 @@
 
     .article-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+      grid-template-columns: repeat(3, 1fr);
       gap: 25px;
     }
 
@@ -328,38 +376,29 @@
     /* Responsive Design */
     @media (max-width: 1024px) {
       .article-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 768px) {
-      .sidebar {
-        transform: translateX(-250px); /* Hidden on mobile */
-      }
-      
-      .sidebar[open] {
-        transform: translateX(0); /* Shown when toggled */
-      }
-      
-      .close-sidebar {
-        display: block; /* Show close button on mobile */
+      .desktop-sidebar {
+        display: none;
       }
       
       .menu-toggle {
-        display: block; /* Show menu toggle on mobile */
+        display: block;
         position: fixed;
         top: 15px;
         left: 15px;
         z-index: 1001;
       }
       
-      .content {
-        margin-left: 0;
-        padding: 20px;
+      .mobile-sidebar[open] {
+        transform: translateX(0);
       }
       
       .header {
-        padding: 1rem;
+        padding-left: 50px;
       }
       
       .email-form {
@@ -367,7 +406,22 @@
       }
       
       .article-grid {
-        grid-template-columns: 1fr; /* 1 column on mobile */
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .content {
+        margin-left: 250px;
+        padding: 2rem 3rem;
+      }
+      
+      .header {
+        padding-left: 270px;
+      }
+      
+      .mobile-sidebar {
+        display: none;
       }
     }
   </style>
@@ -379,17 +433,38 @@
   <!-- Header with Branding -->
   <header class="header">
     <div class="brand">
-      <button class="menu-toggle" on="tap:sidebar.toggle">☰</button>
+      <button class="menu-toggle" on="tap:mobile-sidebar.toggle">☰</button>
       <span class="brand-icon">🎓</span>
       <span class="brand-text">ResumeSmartBuild</span>
     </div>
   </header>
 
-  <!-- Sidebar Navigation - Now visible by default on desktop -->
-  <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="left">
+  <!-- Desktop Sidebar (always visible on desktop) -->
+  <div class="desktop-sidebar">
     <div class="sidebar-header">
       <div class="sidebar-title">ResumeSmartBuild</div>
-      <button class="close-sidebar" on="tap:sidebar.toggle">✕</button>
+    </div>
+    <nav>
+      <a href="index.html">
+        <span class="nav-icon">🏠</span> Home
+      </a>
+      <a href="#">
+        <span class="nav-icon">🤖</span> AI Tools
+      </a>
+      <a href="articles/index.html">
+        <span class="nav-icon">📚</span> Articles
+      </a>
+      <a href="#">
+        <span class="nav-icon">📞</span> Contact
+      </a>
+    </nav>
+  </div>
+
+  <!-- Mobile Sidebar (togglable on mobile) -->
+  <amp-sidebar id="mobile-sidebar" class="mobile-sidebar" layout="nodisplay" side="left">
+    <div class="sidebar-header">
+      <div class="sidebar-title">ResumeSmartBuild</div>
+      <button class="close-sidebar" on="tap:mobile-sidebar.toggle">✕</button>
     </div>
     <nav>
       <a href="index.html">
