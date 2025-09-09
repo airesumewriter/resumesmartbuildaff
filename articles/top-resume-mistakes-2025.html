@@ -92,8 +92,8 @@
       color: white;
     }
 
-    /* Sidebar - Fixed to show by default on desktop */
-    .sidebar {
+    /* Desktop Sidebar */
+    .desktop-sidebar {
       width: 250px;
       background: #1a2a40;
       color: #fff;
@@ -103,10 +103,10 @@
       z-index: 1000;
       top: 0;
       left: 0;
-      transform: translateX(0); /* Changed from -250px to show by default */
+      display: block;
     }
 
-    .sidebar-header {
+    .desktop-sidebar .sidebar-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -115,27 +115,18 @@
       border-bottom: 1px solid #2c3e50;
     }
 
-    .sidebar-title {
+    .desktop-sidebar .sidebar-title {
       font-size: 1.4rem;
       color: #4da6ff;
     }
 
-    .close-sidebar {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-      display: none; /* Hidden on desktop */
-    }
-
-    .sidebar nav {
+    .desktop-sidebar nav {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
 
-    .sidebar nav a {
+    .desktop-sidebar nav a {
       color: #fff;
       text-decoration: none;
       padding: 12px 15px;
@@ -146,7 +137,7 @@
       gap: 10px;
     }
 
-    .sidebar nav a:hover {
+    .desktop-sidebar nav a:hover {
       background: #2c3e50;
     }
 
@@ -154,7 +145,64 @@
       font-size: 1.2rem;
     }
 
-    /* Menu Toggle Button - Hidden on desktop */
+    /* Mobile Sidebar */
+    .mobile-sidebar {
+      width: 250px;
+      background: #1a2a40;
+      color: #fff;
+      padding: 20px;
+      height: 100%;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      transform: translateX(-250px);
+    }
+
+    .mobile-sidebar .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #2c3e50;
+    }
+
+    .mobile-sidebar .sidebar-title {
+      font-size: 1.4rem;
+      color: #4da6ff;
+    }
+
+    .mobile-sidebar .close-sidebar {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .mobile-sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .mobile-sidebar nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 15px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mobile-sidebar nav a:hover {
+      background: #2c3e50;
+    }
+
+    /* Menu Toggle Button */
     .menu-toggle {
       display: none;
       background: none;
@@ -163,15 +211,10 @@
       font-size: 1.5rem;
       cursor: pointer;
       padding: 5px;
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      z-index: 1001;
     }
 
     /* Main Content */
     .content {
-      margin-left: 250px; /* Account for sidebar */
       padding: 20px;
       max-width: 1000px;
       margin: 0 auto;
@@ -554,63 +597,29 @@
       text-decoration: underline;
     }
 
-    /* Responsive Design - FIXED NAVIGATION */
+    /* Responsive Design */
     @media (max-width: 1023px) {
-      .sidebar {
-        transform: translateX(-250px); /* Hidden on mobile by default */
-      }
-      
-      .sidebar[open] {
-        transform: translateX(0); /* Visible when toggled */
-      }
-      
-      .close-sidebar {
-        display: block; /* Show close button on mobile */
+      .desktop-sidebar {
+        display: none;
       }
       
       .menu-toggle {
-        display: block; /* Show menu toggle on mobile */
+        display: block;
       }
       
-      .content {
-        margin-left: 0;
-        padding: 20px;
-      }
-      
-      .header {
-        padding: 1rem;
-      }
-
-      .article-navigation {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .nav-button {
-        max-width: 100%;
-      }
-
-      .read-next-grid {
-        grid-template-columns: 1fr;
+      .mobile-sidebar[open] {
+        transform: translateX(0);
       }
     }
 
     @media (min-width: 1024px) {
-      .sidebar {
-        transform: translateX(0) !important; /* Always visible on desktop */
-      }
-      
       .content {
         margin-left: 250px;
         padding: 2rem 3rem;
       }
       
-      .menu-toggle {
-        display: none; /* Hide menu toggle on desktop */
-      }
-      
       .header {
-        padding-left: 270px; /* Adjust header padding for sidebar */
+        padding-left: 270px;
       }
 
       .read-next-grid {
@@ -631,17 +640,38 @@
   <!-- Header with Branding -->
   <header class="header">
     <div class="brand">
-      <button class="menu-toggle" on="tap:sidebar.toggle">☰</button>
+      <button class="menu-toggle" on="tap:mobile-sidebar.toggle">☰</button>
       <span class="brand-icon">🎓</span>
       <span class="brand-text">ResumeSmartBuild</span>
     </div>
   </header>
 
-  <!-- Sidebar Navigation - Now visible by default on desktop -->
-  <amp-sidebar id="sidebar" class="sidebar" layout="nodisplay" side="left">
+  <!-- Desktop Sidebar Navigation (always visible on desktop) -->
+  <div class="desktop-sidebar">
     <div class="sidebar-header">
       <div class="sidebar-title">ResumeSmartBuild</div>
-      <button class="close-sidebar" on="tap:sidebar.toggle">✕</button>
+    </div>
+    <nav>
+      <a href="../index.html">
+        <span class="nav-icon">🏠</span> Home
+      </a>
+      <a href="#">
+        <span class="nav-icon">🤖</span> AI Tools
+      </a>
+      <a href="index.html">
+        <span class="nav-icon">📚</span> Articles
+      </a>
+      <a href="#">
+        <span class="nav-icon">📞</span> Contact
+      </a>
+    </nav>
+  </div>
+
+  <!-- Mobile Sidebar Navigation (togglable on mobile) -->
+  <amp-sidebar id="mobile-sidebar" class="mobile-sidebar" layout="nodisplay" side="left">
+    <div class="sidebar-header">
+      <div class="sidebar-title">ResumeSmartBuild</div>
+      <button class="close-sidebar" on="tap:mobile-sidebar.toggle">✕</button>
     </div>
     <nav>
       <a href="../index.html">
@@ -831,6 +861,18 @@
       <div class="conclusion">
         <h2>Final Thoughts: Make Your Resume Work for You</h2>
         <p>Avoiding these common mistakes can dramatically improve your chances of landing interviews. In 2025, a resume must be both machine-readable and human-friendly. By focusing on clarity, relevance, and customization, you'll stand out in a crowded job market.</p>
+        
+        <div class="tip-box">
+          <span class="tip-title">Bonus Tip: Monetize Your Resume Knowledge</span>
+          <p>If you're a career coach, blogger, or content creator, consider linking to helpful tools like:</p>
+          <ul>
+            <li><strong>ResumeGenius Affiliate Program</strong> - ATS-friendly resume builder with competitive commissions</li>
+            <li><strong>ResumAI Partner Program</strong> - AI-powered resume builder with recurring commissions</li>
+            <li><strong>SkillShare Affiliate Program</strong> - Recommend resume writing courses</li>
+          </ul>
+          <p>These affiliate programs are beginner-friendly and don't require minimum traffic.</p>
+        </div>
+      </div>
 
       <!-- Second Fiverr Affiliate Section at the end of the article -->
       <div class="affiliate-section">
