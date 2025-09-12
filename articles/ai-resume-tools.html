@@ -9,14 +9,6 @@
   <meta name="keywords" content="AI resume builder, best AI resume tools 2025, ATS resume scanner, AI resume optimizer, resume software that works, affiliate resume tools">
   <meta name="google-adsense-account" content="ca-pub-1651565176095013">
   
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KRBZMGL9');</script>
-  <!-- End Google Tag Manager -->
-
   <!-- AMP Boilerplate -->
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -65,8 +57,6 @@
       background:var(--bg);
       color:#1f2937;
       line-height:1.6;
-      display: flex;
-      min-height: 100vh;
     }
 
     /* Header */
@@ -100,63 +90,13 @@
       color: white;
     }
 
-    /* Desktop Sidebar */
-    .desktop-sidebar {
-      width: 250px;
-      background: #1a2a40;
-      color: #fff;
-      padding: 20px;
-      height: 100vh;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      display: block;
-      overflow-y: auto;
-    }
-
-    .desktop-sidebar .sidebar-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #2c3e50;
-    }
-
-    .desktop-sidebar .sidebar-title {
-      font-size: 1.4rem;
-      color: #4da6ff;
-    }
-
-    .desktop-sidebar nav {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .desktop-sidebar nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 15px;
-      border-radius: 6px;
-      transition: background 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .desktop-sidebar nav a:hover {
-      background: #2c3e50;
-    }
-
     /* Mobile Sidebar */
     .mobile-sidebar {
       width: 250px;
       background: #1a2a40;
       color: #fff;
       padding: 20px;
-      height: 100%;
+      height: 100vh;
       position: fixed;
       z-index: 1000;
       top: 0;
@@ -197,13 +137,12 @@
       text-decoration: none;
       padding: 12px 15px;
       border-radius: 6px;
-      transition: background 0.3s;
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .mobile-sidebar nav a:hover {
+    .mobile-sidebar nav a:active {
       background: #2c3e50;
     }
 
@@ -213,7 +152,7 @@
 
     /* Menu Toggle Button */
     .menu-toggle {
-      display: none;
+      display: block;
       background: none;
       border: none;
       color: white;
@@ -224,15 +163,13 @@
 
     /* Main Content */
     .content {
-      margin-left: 250px;
       padding: 20px;
-      flex: 1;
-      max-width: calc(100% - 250px);
+      max-width: var(--maxw);
+      margin: 0 auto;
     }
 
     .container {
       width: 100%;
-      max-width: var(--maxw);
       background: var(--card);
       border-radius: var(--radius);
       box-shadow: 0 6px 22px rgba(6, 24, 44, 0.08);
@@ -322,6 +259,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
+      text-align: center;
     }
 
     footer {
@@ -375,49 +313,11 @@
       font-weight: 600;
       margin-top: 1rem;
     }
-    
-    .affiliate-button:hover {
-      background: #19a463;
-    }
 
     /* Responsive Design */
-    @media (max-width: 1023px) {
-      .desktop-sidebar {
-        display: none;
-      }
-      
-      .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        z-index: 1001;
-      }
-      
-      .mobile-sidebar[open] {
-        transform: translateX(0);
-      }
-      
-      .content {
-        margin-left: 0;
-        max-width: 100%;
-        padding: 20px;
-      }
-      
-      .header {
-        padding-left: 50px;
-      }
-    }
-
     @media (min-width: 1024px) {
-      .content {
-        margin-left: 250px;
-        padding: 2rem 3rem;
-        max-width: calc(100% - 250px);
-      }
-      
-      .header {
-        padding-left: 270px;
+      .menu-toggle {
+        display: none;
       }
       
       .mobile-sidebar {
@@ -434,15 +334,14 @@
       .article-header h1 {
         font-size: 1.25rem;
       }
+      
+      .tools-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRBZMGL9"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
   <!-- AMP Auto Ads -->
   <amp-auto-ads type="adsense" data-ad-client="ca-pub-1651565176095013"></amp-auto-ads>
 
@@ -454,29 +353,6 @@
       <span class="brand-text">ResumeSmartBuild</span>
     </div>
   </header>
-
-  <!-- Desktop Sidebar (always visible on desktop) -->
-  <div class="desktop-sidebar">
-    <div class="sidebar-header">
-      <a href="../index.html" style="text-decoration: none; color: inherit;">
-        <div class="sidebar-title">ResumeSmartBuild</div>
-      </a>
-    </div>
-    <nav>
-      <a href="../index.html">
-        <span class="nav-icon">🏠</span> Home
-      </a>
-      <a href="#">
-        <span class="nav-icon">🤖</span> AI Tools
-      </a>
-      <a href="index.html">
-        <span class="nav-icon">📚</span> Articles
-      </a>
-      <a href="#">
-        <span class="nav-icon">📞</span> Contact
-      </a>
-    </nav>
-  </div>
 
   <!-- Mobile Sidebar (togglable on mobile) -->
   <amp-sidebar id="mobile-sidebar" class="mobile-sidebar" layout="nodisplay" side="left">
@@ -514,18 +390,16 @@
         <p class="meta">In today's job market, standing out isn't just about having experience—it's about presenting it in a way that passes through Applicant Tracking Systems (ATS) and catches the eye of hiring managers. That's where AI resume tools come in. But with hundreds of platforms promising "the perfect resume," which ones are actually worth your time? We tested the most popular AI-powered resume builders, scanners, and enhancers to see which really help you land more interviews.</p>
 
         <!-- Ad block -->
-        <section class="sponsored">
-          <div class="ad-slot">
-            <amp-ad width="100vw" height="320"
-                type="adsense"
-                data-ad-client="ca-pub-1651565176095013"
-                data-ad-slot="9876543210"
-                data-auto-format="rspv"
-                data-full-width>
-              <div overflow></div>
-            </amp-ad>
-          </div>
-        </section>
+        <div class="ad-slot">
+          <amp-ad width="100vw" height="320"
+              type="adsense"
+              data-ad-client="ca-pub-1651565176095013"
+              data-ad-slot="9876543210"
+              data-auto-format="rspv"
+              data-full-width>
+            <div overflow></div>
+          </amp-ad>
+        </div>
 
         <h2>Why AI Resume Tools Matter in 2025</h2>
         <h3>The rise of ATS (Applicant Tracking Systems)</h3>
@@ -544,7 +418,7 @@
         <h2>The Best AI Resume Tools That Actually Work</h2>
 
         <div class="tools-list">
-          <article class="tool" aria-labelledby="r1">
+          <div class="tool" aria-labelledby="r1">
             <h3 id="r1">1. Resume.io</h3>
             <p><strong>One of the most popular AI-driven resume builders, Resume.io makes creating a professional resume effortless.</strong></p>
             <p><em>Key Features:</em></p>
@@ -555,9 +429,7 @@
             </ul>
             <p><strong>Why It Works:</strong> Its keyword optimization ensures your resume is not only pretty but also ATS-ready.</p>
             <p><strong>Affiliate Note:</strong> Resume.io has a beginner-friendly affiliate program with low entry requirements, making it easy to monetize.</p>
-          </article>
-
-          <!-- Other tool articles would follow the same pattern -->
+          </div>
         </div>
 
         <!-- Affiliate Section -->
@@ -574,9 +446,6 @@
             Explore Fiverr Resume Services
           </a>
         </div>
-
-        <!-- Rest of the content would follow -->
-        
       </article>
 
       <footer>
@@ -617,16 +486,13 @@
           "text": "The best AI resume builders in 2025 are Resume.io, Zety, and Kickresume. These platforms combine ATS-friendly templates with AI-driven content suggestions, helping you create a professional resume that gets noticed."
         }
       }
-      // Additional FAQ items would go here
     ]
   }
   </script>
-  
   <script type="text/javascript">
 var infolinks_pid = 3439969;
 var infolinks_wsid = 0;
 </script>
 <script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
-  
 </body>
 </html>
