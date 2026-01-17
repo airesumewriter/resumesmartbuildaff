@@ -1,0 +1,30 @@
+name: Generate Sitemap
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    # Runs every Sunday at 2 AM UTC
+    - cron: '0 2 * * 0'
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Generate XML Sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: "https://resumesmartbuild.com"
+          output-file: "sitemap.xml"
+          include-pattern: "*.html"
+          
+      - name: Commit and push sitemap
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add sitemap.xml
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generated sitemap [skip ci]" && git push)
