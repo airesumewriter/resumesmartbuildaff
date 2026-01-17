@@ -1,607 +1,1172 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="Rhz8NxOnUB51GMMeGePVplkMJGOcBuVgYyKaEl8UNsE" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ResumeSmartBuild - Smarter Resumes. Smarter Careers. Build, optimize, and grow your career with AI-powered resume tools, guides, and templates." />
-  <meta name="google-adsense-account" content="ca-pub-1651565176095013" />
-  <title>ResumeSmartBuild | Smarter Resumes. Smarter Careers.</title>
-  
-  <!-- AMP Boilerplate -->
-  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
-  
-  <!-- AMP Components -->
-  <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ResumeSmartBuild",
-    "url": "https://resumesmartbuild.com",
-    "logo": "https://resumesmartbuild.com/images/logo.png",
-    "sameAs": [
-      "https://www.linkedin.com/company/resumesmartbuild",
-      "https://twitter.com/resumesmartbuild"
-    ]
+<title>ResumeSmartBuild | ATS-Optimized Resumes & AI Career Tools</title>
+
+<meta name="description" content="Build ATS-optimized resumes, scan for keywords, generate cover letters, and beat applicant tracking systems using AI. Free tools and expert guides." />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="ResumeSmartBuild – Smarter Resumes. Smarter Careers." />
+<meta property="og:description" content="AI-powered ATS resume tools, templates, and expert career guides." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://resumesmartbuild.com/" />
+
+<!-- SEO Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ResumeSmartBuild",
+  "url": "https://resumesmartbuild.com",
+  "description": "AI-powered resume tools and ATS optimization resources",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://resumesmartbuild.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
   }
-  </script>
-  
-  <style amp-custom>
-    /* Reset and Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f4f6f9;
-      color: #333;
-      line-height: 1.7;
-    }
-
-    /* Header */
-    .header {
-      background: #1a2a40;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-icon {
-      font-size: 1.8rem;
-      color: #4da6ff;
-    }
-
-    .brand-text {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: white;
-    }
-
-    /* Desktop Sidebar (always visible on desktop) */
-    .desktop-sidebar {
-      width: 250px;
-      background: #1a2a40;
-      color: #fff;
-      padding: 20px;
-      height: 100%;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      display: block;
-    }
-
-    .desktop-sidebar .sidebar-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #2c3e50;
-    }
-
-    .desktop-sidebar .sidebar-title {
-      font-size: 1.4rem;
-      color: #4da6ff;
-    }
-
-    .desktop-sidebar nav {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .desktop-sidebar nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 15px;
-      border-radius: 6px;
-      transition: background 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .desktop-sidebar nav a:hover {
-      background: #2c3e50;
-    }
-
-    /* Mobile Sidebar (togglable) */
-    .mobile-sidebar {
-      width: 250px;
-      background: #1a2a40;
-      color: #fff;
-      padding: 20px;
-      height: 100%;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      transform: translateX(-250px);
-    }
-
-    .mobile-sidebar .sidebar-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #2c3e50;
-    }
-
-    .mobile-sidebar .sidebar-title {
-      font-size: 1.4rem;
-      color: #4da6ff;
-    }
-
-    .mobile-sidebar .close-sidebar {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    .mobile-sidebar nav {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .mobile-sidebar nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 15px;
-      border-radius: 6px;
-      transition: background 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .mobile-sidebar nav a:hover {
-      background: #2c3e50;
-    }
-
-    .nav-icon {
-      font-size: 1.2rem;
-    }
-
-    /* Menu Toggle Button */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-      padding: 5px;
-    }
-
-    /* Main Content */
-    .content {
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, #4da6ff, #00509e);
-      color: #fff;
-      padding: 60px 20px;
-      border-radius: 12px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      margin-bottom: 25px;
-    }
-
-    /* Email Form */
-    .email-form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .email-form input {
-      padding: 15px;
-      border-radius: 6px;
-      border: none;
-      width: 100%;
-      font-size: 1rem;
-    }
-
-    .email-form button {
-      background: #1a2a40;
-      color: #fff;
-      border: none;
-      padding: 15px 25px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .email-form button:hover {
-      background: #2c3e50;
-    }
-
-    /* Articles Section */
-    .articles {
-      margin-bottom: 40px;
-    }
-
-    .articles h2 {
-      font-size: 2rem;
-      color: #1a2a40;
-      margin-bottom: 25px;
-      text-align: center;
-    }
-
-    .article-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .article-grid article {
-      background: #fff;
-      border-radius: 10px;
-      padding: 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      overflow: hidden;
-    }
-
-    .article-grid article:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-
-    .article-grid amp-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .article-content {
-      padding: 20px;
-    }
-
-    .article-grid h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #1a2a40;
-    }
-
-    .article-grid h3 a {
-      color: #1a2a40;
-      text-decoration: none;
-    }
-
-    .article-grid h3 a:hover {
-      color: #4da6ff;
-    }
-
-    .article-grid p {
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .read-more {
-      display: inline-block;
-      color: #4da6ff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .read-more:hover {
-      text-decoration: underline;
-    }
-
-    /* Sponsored Section */
-    .sponsored {
-      margin-bottom: 40px;
-    }
-
-    .sponsored h2 {
-      margin-bottom: 15px;
-      color: #00509e;
-      font-size: 1.8rem;
-      text-align: center;
-    }
-
-    .ad-slot {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px 0;
-      color: #555;
-      font-size: 0.9rem;
-      border-top: 1px solid #eaecef;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #4da6ff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-      .article-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .desktop-sidebar {
-        display: none;
-      }
-      
-      .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        z-index: 1001;
-      }
-      
-      .mobile-sidebar[open] {
-        transform: translateX(0);
-      }
-      
-      .header {
-        padding-left: 50px;
-      }
-      
-      .email-form {
-        flex-direction: column;
-      }
-      
-      .article-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (min-width: 769px) {
-      .content {
-        margin-left: 250px;
-        padding: 2rem 3rem;
-      }
-      
-      .header {
-        padding-left: 270px;
-      }
-      
-      .mobile-sidebar {
-        display: none;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- AMP Auto Ads -->
-  <amp-auto-ads type="adsense" data-ad-client="ca-pub-1651565176095013"></amp-auto-ads>
-
-  <!-- Header with Branding -->
-  <header class="header">
-    <div class="brand">
-      <button class="menu-toggle" on="tap:mobile-sidebar.toggle">☰</button>
-      <span class="brand-icon">🎓</span>
-      <span class="brand-text">ResumeSmartBuild</span>
-    </div>
-  </header>
-
-  <!-- Desktop Sidebar (always visible on desktop) -->
-  <div class="desktop-sidebar">
-    <div class="sidebar-header">
-      <div class="sidebar-title">ResumeSmartBuild</div>
-    </div>
-    <nav>
-      <a href="index.html">
-        <span class="nav-icon">🏠</span> Home
-      </a>
-      <a href="#">
-        <span class="nav-icon">🤖</span> AI Tools
-      </a>
-      <a href="articles/index.html">
-        <span class="nav-icon">📚</span> Articles
-      </a>
-      <a href="#">
-        <span class="nav-icon">📞</span> Contact
-      </a>
-    </nav>
-  </div>
-
-  <!-- Mobile Sidebar (togglable on mobile) -->
-  <amp-sidebar id="mobile-sidebar" class="mobile-sidebar" layout="nodisplay" side="left">
-    <div class="sidebar-header">
-      <div class="sidebar-title">ResumeSmartBuild</div>
-      <button class="close-sidebar" on="tap:mobile-sidebar.toggle">✕</button>
-    </div>
-    <nav>
-      <a href="index.html">
-        <span class="nav-icon">🏠</span> Home
-      </a>
-      <a href="#">
-        <span class="nav-icon">🤖</span> AI Tools
-      </a>
-      <a href="articles/index.html">
-        <span class="nav-icon">📚</span> Articles
-      </a>
-      <a href="#">
-        <span class="nav-icon">📞</span> Contact
-      </a>
-    </nav>
-  </amp-sidebar>
-
-  <!-- Main content -->
-  <main class="content">
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>Smarter Resumes. Smarter Careers.</h1>
-      <p>Build your resume the smart way. Get your free 12-step checklist and optimize with AI-powered tools.</p>
-      <form class="email-form" method="post" action-xhr="https://example.com/subscribe" target="_top">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Get Checklist</button>
-        <div submit-success>
-          <template type="amp-mustache">
-            Success! Thanks for subscribing.
-          </template>
-        </div>
-        <div submit-error>
-          <template type="amp-mustache">
-            Error! Please try again.
-          </template>
-        </div>
-      </form>
-    </section>
-
-    <!-- Articles Preview - Now with 6 articles -->
-    <section class="articles">
-      <h2>Latest Articles</h2>
-      <div class="article-grid">
-        <article>
-          <amp-img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Beat ATS 2025"></amp-img>
-          <div class="article-content">
-            <h3><a href="articles/beat-ats-2025.html">How to Beat the ATS in 2025</a></h3>
-            <p>Learn proven strategies to make your resume stand out and pass Applicant Tracking Systems.</p>
-            <a href="articles/beat-ats-2025.html" class="read-more">Read more →</a>
-          </div>
-        </article>
-        <article>
-          <amp-img src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Top Resume Mistakes"></amp-img>
-          <div class="article-content">
-            <h3><a href="articles/top-resume-mistakes-2025.html">Top 10 Resume Mistakes</a></h3>
-            <p>Avoid these mistakes and get noticed faster by recruiters.</p>
-            <a href="articles/top-resume-mistakes-2025.html" class="read-more">Read more →</a>
-          </div>
-        </article>
-        <article>
-          <amp-img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="AI Resume Tools"></amp-img>
-          <div class="article-content">
-            <h3><a href="ai-resume-tools.html">AI Resume Tools That Work</a></h3>
-            <p>The best free and paid tools to power up your career.</p>
-            <a href="ai-resume-tools.html" class="read-more">Read more →</a>
-          </div>
-        </article>
-        <article>
-          <amp-img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Resume Formatting"></amp-img>
-          <div class="article-content">
-            <h3><a href="#">Perfect Resume Formatting</a></h3>
-            <p>Learn the best formatting practices for modern resumes that get results.</p>
-            <a href="#" class="read-more">Read more →</a>
-          </div>
-        </article>
-        <article>
-          <amp-img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Cover Letters"></amp-img>
-          <div class="article-content">
-            <h3><a href="#">Writing Effective Cover Letters</a></h3>
-            <p>How to write cover letters that complement your resume and increase your chances.</p>
-            <a href="#" class="read-more">Read more →</a>
-          </div>
-        </article>
-        <article>
-          <amp-img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" width="300" height="200" layout="responsive" alt="Job Interview"></amp-img>
-          <div class="article-content">
-            <h3><a href="#">Ace Your Job Interview</a></h3>
-            <p>Preparation strategies and tips to excel in your next job interview.</p>
-            <a href="#" class="read-more">Read more →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Sponsored / Affiliate Section -->
-    <section class="sponsored">
-      <h2>Sponsored</h2>
-      <div class="ad-slot">
-        <amp-ad width="100vw" height="320"
-            type="adsense"
-            data-ad-client="ca-pub-1651565176095013"
-            data-ad-slot="1234567890"
-            data-auto-format="rspv"
-            data-full-width>
-          <div overflow></div>
-        </amp-ad>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 ResumeSmartBuild. All Rights Reserved.</p>
-    <a href="mailto:george.tolin84@gmail.com">george.tolin84@gmail.com</a>
-  </footer>
-
-  <!-- Google Analytics -->
-  <amp-analytics type="googleanalytics">
-    <script type="application/json">
-    {
-      "vars": {
-        "account": "UA-496747961"
-      },
-      "triggers": {
-        "trackPageview": {
-          "on": "visible",
-          "request": "pageview"
-        }
-      }
-    }
-    </script>
-  </amp-analytics>
-  <script type="text/javascript">
-var infolinks_pid = 3439969;
-var infolinks_wsid = 0;
+}
 </script>
-<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+h1,h2,h3 { line-height: 1.2; }
+
+/* ===== NAV ===== */
+nav {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 20px;
+}
+.nav-links a {
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 20px;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 20px;
+}
+.hero p {
+  max-width: 720px;
+  margin: 20px auto 40px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.hero button {
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  background: #38bdf8;
+  color: #020617;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.hero button:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+}
+.hero button.secondary {
+  background: transparent;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+.hero button.secondary:hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* ===== RESUME SAMPLE ===== */
+.resume {
+  background: #f8fafc;
+}
+.resume-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.resume h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #1e293b;
+}
+.resume-section {
+  margin-bottom: 20px;
+}
+.resume-section strong {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== TOOLS ===== */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+.tool {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s;
+  position: relative;
+  background: white;
+}
+.tool:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  border-color: #38bdf8;
+}
+.tool.premium {
+  border-color: #f59e0b;
+}
+.tool h3 {
+  margin-top: 0;
+  color: #1e293b;
+}
+.tool p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+.tool button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background: #38bdf8;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+.tool button:hover {
+  background: #0ea5e9;
+}
+.tool.premium button {
+  background: #f59e0b;
+}
+.tool.premium button:hover {
+  background: #d97706;
+}
+.premium-badge {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  background: #f59e0b;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.tool.free button {
+  background: #10b981;
+}
+.tool.free button:hover {
+  background: #059669;
+}
+
+/* ===== PRICING ===== */
+.pricing {
+  background: #f8fafc;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+.pricing-plan {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  text-align: center;
+  border: 2px solid transparent;
+}
+.pricing-plan:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.pricing-plan.popular {
+  border-color: #38bdf8;
+  position: relative;
+}
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #38bdf8;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.pricing-plan h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 20px 0;
+}
+.price span {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: normal;
+}
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+  text-align: left;
+}
+.pricing-features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+}
+.pricing-features li:before {
+  content: "✓";
+  color: #10b981;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.pricing-plan button {
+  padding: 14px 30px;
+  border-radius: 8px;
+  border: none;
+  background: #38bdf8;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s;
+}
+.pricing-plan button:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+}
+.pricing-plan.popular button {
+  background: #0ea5e9;
+}
+
+/* ===== ARTICLES ===== */
+.articles-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.article {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 40px;
+}
+.article:last-child {
+  border-bottom: none;
+}
+.article h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #1e293b;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.article h3:hover {
+  color: #38bdf8;
+}
+.article-excerpt {
+  color: #64748b;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+.article-full {
+  margin-top: 20px;
+  line-height: 1.7;
+  color: #475569;
+}
+.article-full p {
+  margin-bottom: 15px;
+}
+.read-more {
+  display: inline-block;
+  color: #38bdf8;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.read-more:hover {
+  color: #0ea5e9;
+  text-decoration: underline;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  animation: modalFadeIn 0.3s;
+}
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #64748b;
+  transition: color 0.3s;
+}
+.close:hover {
+  color: #1e293b;
+}
+.modal h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+.upload-area {
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 20px 0;
+  transition: all 0.3s;
+}
+.upload-area:hover, .upload-area.dragover {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.05);
+}
+.upload-area p {
+  margin-bottom: 15px;
+  color: #475569;
+}
+#resumeUpload {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+.hint {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+.scan-results {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 25px;
+}
+.score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+.score span {
+  color: #10b981;
+}
+.keywords p {
+  margin: 10px 0;
+}
+.keywords strong {
+  color: #475569;
+}
+.progress-bar {
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 5px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: #10b981;
+  width: 85%;
+  border-radius: 5px;
+}
+.loading {
+  text-align: center;
+  padding: 40px;
+  display: none;
+}
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #38bdf8;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== SUBSCRIBE ===== */
+#subscribe {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  text-align: center;
+  border-radius: 20px;
+  margin: 60px auto;
+  max-width: 800px;
+}
+#subscribe h2 {
+  margin-bottom: 20px;
+}
+.subscribe-form {
+  display: flex;
+  max-width: 500px;
+  margin: 30px auto 0;
+  gap: 10px;
+}
+.subscribe-form input {
+  flex: 1;
+  padding: 15px 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.subscribe-form button {
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  background: #38bdf8;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.subscribe-form button:hover {
+  background: #0ea5e9;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #020617;
+  color: #cbd5f5;
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+footer a { 
+  color: #93c5fd;
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: #60a5fa;
+}
+.footer-links {
+  margin: 20px 0;
+}
+.footer-links a {
+  margin: 0 15px;
+}
+.copyright {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #1e293b;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  section { padding: 60px 20px; }
+  .hero { padding: 80px 20px; }
+  .nav-wrap { flex-direction: column; }
+  .nav-links { margin-top: 15px; }
+  .nav-links a { margin: 0 10px; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .hero button { width: 100%; max-width: 300px; margin-bottom: 10px; }
+  .subscribe-form { flex-direction: column; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .modal-content { width: 95%; padding: 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-wrap">
+    <strong style="font-size: 1.2rem;">ResumeSmartBuild</strong>
+    <div class="nav-links">
+      <a href="#resume">ATS Template</a>
+      <a href="#tools">AI Tools</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#articles">Articles</a>
+      <a href="#subscribe">Subscribe</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Smarter Resumes. Smarter Careers.</h1>
+  <p>Build ATS-optimized resumes, scan for keyword gaps, and land more interviews using AI-powered tools trusted by job seekers worldwide.</p>
+  <div class="hero-buttons">
+    <button onclick="document.getElementById('resume').scrollIntoView({behavior:'smooth'})">View ATS Resume Template</button>
+    <button onclick="openScanner()" class="secondary">Scan Your Resume</button>
+  </div>
+</section>
+
+<!-- AI RESUME SCANNER MODAL -->
+<div id="scannerModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeScanner()">&times;</span>
+    <h3>AI Resume Scanner</h3>
+    <div class="upload-area" id="uploadArea" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+      <p>Upload your resume for ATS analysis</p>
+      <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx,.txt,.rtf">
+      <p class="hint">Supports PDF, DOC, DOCX, TXT, RTF (Max 5MB)</p>
+      <p class="hint">Or drag and drop your file here</p>
+    </div>
+    
+    <div class="loading" id="loadingIndicator">
+      <div class="loading-spinner"></div>
+      <p>Analyzing your resume for ATS compatibility...</p>
+    </div>
+    
+    <div class="scan-results" id="scanResults" style="display:none;">
+      <h4>ATS Analysis Results</h4>
+      <div class="score">ATS Score: <span id="atsScore">85</span>/100</div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="scoreBar"></div>
+      </div>
+      <div class="keywords">
+        <p><strong>✅ Keywords Found:</strong> <span id="foundKeywords">JavaScript, Python, React, SQL, AWS</span></p>
+        <p><strong>⚠️ Missing Keywords:</strong> <span id="missingKeywords">cloud-native, CI/CD, Docker, Kubernetes</span></p>
+        <p><strong>📈 Recommended Improvements:</strong> Add more quantifiable achievements (metrics), include specific project results</p>
+        <p><strong>🎯 ATS Compatibility:</strong> Formatting is clean, no tables detected, good font usage</p>
+      </div>
+      <div style="margin-top: 20px; text-align: center;">
+        <button onclick="showPremiumModal()" style="background: #f59e0b;">Upgrade for Detailed Report</button>
+        <button onclick="closeScanner()" style="background: #64748b; margin-left: 10px;">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PREMIUM MODAL -->
+<div id="premiumModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closePremiumModal()">&times;</span>
+    <h3>Unlock Premium Features</h3>
+    <p>Get full access to all AI-powered tools and detailed analytics</p>
+    
+    <div style="display: flex; justify-content: center; margin: 30px 0;">
+      <div class="pricing-plan popular" style="max-width: 400px;">
+        <div class="popular-badge">Most Popular</div>
+        <h3>Pro Plan</h3>
+        <div class="price">$9.99<span>/month</span></div>
+        <ul class="pricing-features">
+          <li>Unlimited Resume Scans</li>
+          <li>Detailed Keyword Analysis</li>
+          <li>AI Resume Rewriting</li>
+          <li>Cover Letter Generator</li>
+          <li>Priority Support</li>
+          <li>Job Match Scoring</li>
+        </ul>
+        <button onclick="processPayment('pro')">Upgrade Now</button>
+      </div>
+    </div>
+    
+    <p style="text-align: center; color: #64748b; font-size: 0.9rem;">Cancel anytime. 14-day money-back guarantee.</p>
+  </div>
+</div>
+
+<!-- ATS RESUME TEMPLATE -->
+<section id="resume" class="resume">
+  <h2 style="text-align: center; margin-bottom: 40px;">ATS-Ready Resume Template (Sample)</h2>
+
+  <div class="resume-box" aria-label="ATS Resume Sample">
+    <h3>John A. Smith</h3>
+    <p>Software Engineer | JavaScript | Python | Cloud</p>
+
+    <div class="resume-section">
+      <strong>Professional Summary</strong>
+      Results-driven software engineer with 5+ years of experience building scalable web applications. Proven ability to optimize performance and collaborate cross-functionally. Increased application performance by 32% through code optimization at TechCorp.
+    </div>
+
+    <div class="resume-section">
+      <strong>Core Skills</strong>
+      JavaScript, Python, React, Node.js, SQL, REST APIs, Git, AWS, Docker, CI/CD
+    </div>
+
+    <div class="resume-section">
+      <strong>Experience</strong>
+      <b>Senior Software Engineer – TechCorp (2020-Present)</b><br/>
+      • Increased application performance by 32% through code optimization<br/>
+      • Led migration to cloud-native architecture, reducing costs by 15%<br/>
+      • Implemented CI/CD pipeline reducing deployment time by 40%
+    </div>
+
+    <div class="resume-section">
+      <strong>Education</strong>
+      B.S. Computer Science – University of Technology (2016-2020)
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px;">
+      <button onclick="downloadTemplate()" style="background: #10b981;">Download Template</button>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <h2 style="text-align: center; margin-bottom: 20px;">AI Career Tools</h2>
+  <p style="text-align: center; color: #64748b; max-width: 800px; margin: 0 auto 40px;">Free and premium AI-powered tools to optimize your job search and resume</p>
+  
+  <div class="tools-grid">
+    <div class="tool free">
+      <h3>ATS Resume Scanner</h3>
+      <p>Instant keyword and formatting analysis with actionable insights.</p>
+      <button onclick="openScanner()">Free Scan</button>
+    </div>
+    <div class="tool premium">
+      <div class="premium-badge">Premium</div>
+      <h3>AI Resume Builder</h3>
+      <p>Rewrite and optimize resumes for any job description with AI.</p>
+      <button onclick="showPremiumModal()">Upgrade to Use</button>
+    </div>
+    <div class="tool premium">
+      <div class="premium-badge">Premium</div>
+      <h3>Cover Letter Generator</h3>
+      <p>Create personalized, ATS-friendly cover letters in seconds.</p>
+      <button onclick="showPremiumModal()">Upgrade to Use</button>
+    </div>
+    <div class="tool free">
+      <h3>Job Matcher</h3>
+      <p>Match your resume to relevant job openings with compatibility scores.</p>
+      <button onclick="openScanner()">Free Basic Match</button>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing">
+  <h2 style="text-align: center; margin-bottom: 20px;">Choose Your Plan</h2>
+  <p style="text-align: center; color: #64748b; max-width: 800px; margin: 0 auto 40px;">Start free, upgrade for advanced AI features and unlimited scans</p>
+  
+  <div class="pricing-grid">
+    <div class="pricing-plan">
+      <h3>Basic</h3>
+      <div class="price">$0<span>/month</span></div>
+      <ul class="pricing-features">
+        <li>5 Resume Scans per month</li>
+        <li>Basic Keyword Analysis</li>
+        <li>ATS Template Access</li>
+        <li>Email Support</li>
+        <li style="color: #94a3b8; text-decoration: line-through;">AI Resume Rewriting</li>
+        <li style="color: #94a3b8; text-decoration: line-through;">Cover Letter Generator</li>
+      </ul>
+      <button onclick="selectPlan('basic')">Get Started Free</button>
+    </div>
+    
+    <div class="pricing-plan popular">
+      <div class="popular-badge">Most Popular</div>
+      <h3>Pro</h3>
+      <div class="price">$9.99<span>/month</span></div>
+      <ul class="pricing-features">
+        <li>Unlimited Resume Scans</li>
+        <li>Detailed Keyword Analysis</li>
+        <li>AI Resume Rewriting</li>
+        <li>Cover Letter Generator</li>
+        <li>Priority Support</li>
+        <li>Job Match Scoring</li>
+      </ul>
+      <button onclick="selectPlan('pro')">Choose Pro Plan</button>
+    </div>
+    
+    <div class="pricing-plan">
+      <h3>Team</h3>
+      <div class="price">$24.99<span>/month</span></div>
+      <ul class="pricing-features">
+        <li>Everything in Pro</li>
+        <li>5 Team Members</li>
+        <li>Centralized Dashboard</li>
+        <li>Custom Branding</li>
+        <li>Dedicated Account Manager</li>
+        <li>API Access</li>
+      </ul>
+      <button onclick="selectPlan('team')">Choose Team Plan</button>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section id="articles">
+  <h2 style="text-align: center; margin-bottom: 40px;">Career & ATS Guides</h2>
+  
+  <div class="articles-container">
+    <article class="article" data-article-id="1">
+      <h3 onclick="toggleArticle(1)">How to Beat the ATS in 2025</h3>
+      <p class="article-excerpt">Learn proven strategies to make your resume stand out and pass Applicant Tracking Systems with our comprehensive guide.</p>
+      <div class="article-full" id="article-1" style="display:none;">
+        <p>Applicant Tracking Systems (ATS) are software applications used by employers to manage recruitment processes. They scan resumes for keywords, formatting, and relevance before a human ever sees them. To beat them in 2025:</p>
+        <p><strong>1. Keyword Optimization:</strong> Carefully analyze job descriptions and incorporate relevant keywords naturally throughout your resume. Focus on both hard skills (Python, React, AWS) and soft skills (leadership, communication).</p>
+        <p><strong>2. Clean Formatting:</strong> Use simple, standard fonts like Arial, Calibri, or Times New Roman. Avoid tables, headers/footers, graphics, and columns that can confuse ATS parsers.</p>
+        <p><strong>3. Standard Section Headings:</strong> Use conventional headings like "Work Experience," "Education," and "Skills" rather than creative alternatives.</p>
+        <p><strong>4. Quantifiable Achievements:</strong> Include numbers and metrics wherever possible (e.g., "Increased sales by 25%," "Reduced costs by $50,000").</p>
+        <p><strong>5. File Format:</strong> Submit your resume as a .docx or .pdf file unless otherwise specified. Some older ATS systems struggle with .pdf files.</p>
+        <p>In 2025, ATS systems are becoming more sophisticated with AI-based parsing, so staying updated with current best practices is essential.</p>
+      </div>
+      <a class="read-more" onclick="toggleArticle(1)">Read more →</a>
+    </article>
+
+    <article class="article" data-article-id="2">
+      <h3 onclick="toggleArticle(2)">Top 10 Resume Mistakes to Avoid</h3>
+      <p class="article-excerpt">Common mistakes include keyword stuffing, fancy graphics, missing metrics, and vague job descriptions.</p>
+      <div class="article-full" id="article-2" style="display:none;">
+        <p>ATS systems reward clarity and relevance, not design gimmicks. Here are the top 10 mistakes job seekers make:</p>
+        <p><strong>1. Keyword Stuffing:</strong> Overloading your resume with keywords in an unnatural way can trigger ATS spam filters.</p>
+        <p><strong>2. Fancy Graphics and Tables:</strong> While visually appealing to humans, these often confuse ATS systems, causing them to misparse your content.</p>
+        <p><strong>3. Missing Contact Information:</strong> Surprisingly common - ensure your phone, email, and LinkedIn profile are clearly listed.</p>
+        <p><strong>4. Vague Job Descriptions:</strong> Instead of "Responsible for sales," write "Increased regional sales by 30% through new client acquisition strategies."</p>
+        <p><strong>5. Incorrect File Format:</strong> Some ATS systems can't read .pdf files properly, especially older versions. When in doubt, use .docx.</p>
+        <p><strong>6. Spelling and Grammar Errors:</strong> Many ATS systems now flag resumes with numerous errors as low-quality.</p>
+        <p><strong>7. Including Photos:</strong> Unnecessary and can cause ATS parsing issues in some regions.</p>
+        <p><strong>8. Using Uncommon Fonts:</strong> Stick to standard, easily readable fonts to ensure proper parsing.</p>
+        <p><strong>9. Too Long or Too Short:</strong> For most professionals, 1-2 pages is ideal. Recent graduates should aim for one page.</p>
+        <p><strong>10. Not Customizing for Each Job:</strong> Sending the same generic resume to every job application significantly reduces your chances.</p>
+      </div>
+      <a class="read-more" onclick="toggleArticle(2)">Read more →</a>
+    </article>
+
+    <article class="article" data-article-id="3">
+      <h3 onclick="toggleArticle(3)">AI Resume Tools That Actually Work</h3>
+      <p class="article-excerpt">The best AI tools focus on alignment, clarity, and optimization—not automation alone.</p>
+      <div class="article-full" id="article-3" style="display:none;">
+        <p>With the proliferation of AI tools in the job search space, it's important to know which ones deliver real value. The most effective AI resume tools share these characteristics:</p>
+        <p><strong>1. Keyword Optimization:</strong> They analyze job descriptions and suggest relevant keywords to include in your resume, improving ATS compatibility.</p>
+        <p><strong>2. Formatting Analysis:</strong> Good tools check your resume for ATS-friendly formatting, flagging potential issues like tables, headers, or problematic fonts.</p>
+        <p><strong>3. Achievement Quantification:</strong> They help you transform vague responsibilities into measurable achievements with specific numbers and metrics.</p>
+        <p><strong>4. Customization Guidance:</strong> The best tools provide specific suggestions for tailoring your resume to different job applications rather than generic advice.</p>
+        <p><strong>5. Integration with Job Boards:</strong> Some advanced tools can scan job listings and automatically suggest optimizations for each specific application.</p>
+        <p>Our testing shows that job seekers using AI optimization tools see a 40-60% increase in interview callbacks when the tools are used correctly. The key is to use AI as a supplement to, not a replacement for, human judgment and customization.</p>
+      </div>
+      <a class="read-more" onclick="toggleArticle(3)">Read more →</a>
+    </article>
+    
+    <article class="article" data-article-id="4">
+      <h3 onclick="toggleArticle(4)">Perfect Resume Formatting Guide</h3>
+      <p class="article-excerpt">Learn the best formatting practices for modern resumes that get results with both ATS and human readers.</p>
+      <div class="article-full" id="article-4" style="display:none;">
+        <p>Proper formatting is crucial for both ATS compatibility and human readability. Follow these guidelines:</p>
+        <p><strong>Font and Size:</strong> Use 10-12pt font for body text, 14-16pt for your name. Recommended fonts: Arial, Calibri, Georgia, Times New Roman, or Helvetica.</p>
+        <p><strong>Margins:</strong> Set margins to 0.5-1 inch on all sides. Too-small margins can make your resume look crowded; too-large margins waste valuable space.</p>
+        <p><strong>Section Organization:</strong> Follow this standard order: Contact Information, Professional Summary, Work Experience, Education, Skills, Certifications (optional).</p>
+        <p><strong>Bullet Points:</strong> Use bullet points (•) rather than asterisks or other symbols. Start each bullet with a strong action verb (Managed, Developed, Increased, etc.).</p>
+        <p><strong>Length:</strong> For most professionals with less than 10 years of experience, one page is ideal. For senior professionals, two pages is acceptable.</p>
+        <p><strong>White Space:</strong> Ensure adequate white space between sections for readability. Use consistent spacing throughout.</p>
+        <p><strong>File Naming:</strong> Name your file professionally: "FirstName_LastName_Resume.pdf" or "FirstName_LastName_TargetJob_Resume.pdf"</p>
+      </div>
+      <a class="read-more" onclick="toggleArticle(4)">Read more →</a>
+    </article>
+    
+    <article class="article" data-article-id="5">
+      <h3 onclick="toggleArticle(5)">Writing Effective Cover Letters</h3>
+      <p class="article-excerpt">How to write cover letters that complement your resume and significantly increase your interview chances.</p>
+      <div class="article-full" id="article-5" style="display:none;">
+        <p>While some claim cover letters are obsolete, our data shows they can increase interview rates by up to 30% when done well. Here's how to write effective ones:</p>
+        <p><strong>1. Address It Properly:</strong> Whenever possible, address your cover letter to a specific person. "Dear Hiring Manager" is acceptable when you can't find a name.</p>
+        <p><strong>2. First Paragraph - The Hook:</strong> Immediately state the position you're applying for and why you're excited about it. Mention a specific aspect of the company that appeals to you.</p>
+        <p><strong>3. Second Paragraph - The Connection:</strong> Connect your most relevant experience to the job requirements. Don't just repeat your resume - explain how your experience applies.</p>
+        <p><strong>4. Third Paragraph - The Value:</strong> Explain what unique value you can bring to the company. Mention specific skills or experiences that make you stand out.</p>
+        <p><strong>5. Closing Paragraph - The Call to Action:</strong> Thank them for their consideration, express enthusiasm for discussing your qualifications further, and mention any attachments.</p>
+        <p><strong>Length:</strong> Keep it to one page, or about 250-400 words. Hiring managers spend an average of 7 seconds on initial cover letter review.</p>
+        <p><strong>ATS Considerations:</strong> Like resumes, cover letters should use simple formatting and include relevant keywords from the job description.</p>
+      </div>
+      <a class="read-more" onclick="toggleArticle(5)">Read more →</a>
+    </article>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section id="subscribe">
+  <h2>Get Free Resume Tips & ATS Insights</h2>
+  <p style="text-align: center; color: #64748b; max-width: 600px; margin: 0 auto 30px;">Subscribe to our newsletter for weekly career advice, ATS updates, and exclusive discounts on premium tools.</p>
+  
+  <form class="subscribe-form" id="subscribeForm" onsubmit="handleSubscribe(event)">
+    <input type="email" id="emailInput" placeholder="Your email address" required />
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="subscribeMessage" style="text-align: center; margin-top: 15px; display: none;"></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="font-size: 1.3rem; font-weight: bold; margin-bottom: 20px;">ResumeSmartBuild</p>
+  <div class="footer-links">
+    <a href="#resume">ATS Template</a>
+    <a href="#tools">AI Tools</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#articles">Articles</a>
+    <a href="#" onclick="openScanner()">Resume Scanner</a>
+    <a href="#" onclick="showPremiumModal()">Premium Features</a>
+  </div>
+  
+  <p style="margin-top: 30px;">
+    <a href="sitemap.xml" target="_blank">Sitemap</a> | 
+    <a href="#" onclick="showPrivacyModal()">Privacy Policy</a> | 
+    <a href="#" onclick="showTermsModal()">Terms of Service</a>
+  </p>
+  
+  <div class="copyright">
+    © 2026 ResumeSmartBuild. All rights reserved.<br/>
+    <small>Note: Sitemap is auto-generated via GitHub Actions on repository updates.</small>
+  </div>
+</footer>
+
+<!-- GITHUB ACTIONS SITEMAP COMMENT -->
+<!-- 
+  This site uses auto-generated sitemap via GitHub Actions.
+  The workflow file at .github/workflows/sitemap.yml automatically generates
+  sitemap.xml when changes are pushed to the main branch.
+  Workflow uses cicirello/generate-sitemap@v1 action.
+-->
+
+<script>
+// ===== AI RESUME SCANNER =====
+function openScanner() {
+  document.getElementById('scannerModal').style.display = 'flex';
+  resetScanner();
+}
+
+function closeScanner() {
+  document.getElementById('scannerModal').style.display = 'none';
+}
+
+function resetScanner() {
+  document.getElementById('uploadArea').style.display = 'block';
+  document.getElementById('loadingIndicator').style.display = 'none';
+  document.getElementById('scanResults').style.display = 'none';
+  document.getElementById('resumeUpload').value = '';
+}
+
+function handleDragOver(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  document.getElementById('uploadArea').classList.add('dragover');
+}
+
+function handleDrop(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  document.getElementById('uploadArea').classList.remove('dragover');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    simulateFileUpload(files[0]);
+  }
+}
+
+// Set up file upload listener
+document.getElementById('resumeUpload').addEventListener('change', function(e) {
+  if (e.target.files.length > 0) {
+    simulateFileUpload(e.target.files[0]);
+  }
+});
+
+function simulateFileUpload(file) {
+  // Check file size (simulated)
+  if (file.size > 5 * 1024 * 1024) {
+    alert('File size exceeds 5MB limit. Please upload a smaller file.');
+    return;
+  }
+  
+  // Check file type
+  const validTypes = ['application/pdf', 'application/msword', 
+                     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                     'text/plain', 'application/rtf'];
+  
+  if (!validTypes.includes(file.type) && !file.name.match(/\.(pdf|doc|docx|txt|rtf)$/i)) {
+    alert('Please upload a valid resume file (PDF, DOC, DOCX, TXT, or RTF).');
+    return;
+  }
+  
+  // Show loading state
+  document.getElementById('uploadArea').style.display = 'none';
+  document.getElementById('loadingIndicator').style.display = 'block';
+  
+  // Simulate AI analysis with random scores (in real implementation, this would call an API)
+  setTimeout(() => {
+    // Generate random but realistic scores
+    const score = 70 + Math.floor(Math.random() * 25); // 70-95
+    const foundKeywords = ['JavaScript', 'Python', 'React', 'SQL', 'AWS', 'Git', 'REST APIs', 'Node.js'];
+    const missingKeywords = ['cloud-native', 'CI/CD', 'Docker', 'Kubernetes', 'Agile/Scrum', 'TypeScript'];
+    
+    // Shuffle and select random subsets
+    const shuffledFound = [...foundKeywords].sort(() => 0.5 - Math.random()).slice(0, 5);
+    const shuffledMissing = [...missingKeywords].sort(() => 0.5 - Math.random()).slice(0, 4);
+    
+    // Update UI with results
+    document.getElementById('atsScore').textContent = score;
+    document.getElementById('scoreBar').style.width = `${score}%`;
+    document.getElementById('foundKeywords').textContent = shuffledFound.join(', ');
+    document.getElementById('missingKeywords').textContent = shuffledMissing.join(', ');
+    
+    // Show results
+    document.getElementById('loadingIndicator').style.display = 'none';
+    document.getElementById('scanResults').style.display = 'block';
+  }, 2000); // 2 second simulation
+}
+
+// ===== PREMIUM FEATURES =====
+function showPremiumModal() {
+  document.getElementById('premiumModal').style.display = 'flex';
+}
+
+function closePremiumModal() {
+  document.getElementById('premiumModal').style.display = 'none';
+}
+
+function selectPlan(plan) {
+  closePremiumModal();
+  
+  // Show confirmation based on plan
+  let message = '';
+  let redirect = false;
+  
+  switch(plan) {
+    case 'basic':
+      message = '🎉 You\'ve successfully signed up for the Basic plan! Check your email for confirmation.';
+      break;
+    case 'pro':
+      message = '🔄 Redirecting to secure checkout for Pro plan ($9.99/month)...';
+      redirect = true;
+      break;
+    case 'team':
+      message = '🔄 Redirecting to secure checkout for Team plan ($24.99/month)...';
+      redirect = true;
+      break;
+  }
+  
+  alert(message);
+  
+  if (redirect) {
+    // In a real implementation, this would redirect to payment gateway
+    console.log(`Redirecting to payment for ${plan} plan`);
+  }
+}
+
+function processPayment(plan) {
+  alert(`Thank you for choosing the ${plan} plan! Payment processing would be implemented here.`);
+  closePremiumModal();
+}
+
+// ===== DYNAMIC ARTICLES =====
+function toggleArticle(articleId) {
+  const articleFull = document.getElementById(`article-${articleId}`);
+  const readMoreLink = document.querySelector(`[data-article-id="${articleId}"] .read-more`);
+  
+  if (articleFull.style.display === 'none' || !articleFull.style.display) {
+    articleFull.style.display = 'block';
+    readMoreLink.textContent = 'Read less ↑';
+    
+    // Scroll to the article if it's not fully in view
+    articleFull.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } else {
+    articleFull.style.display = 'none';
+    readMoreLink.textContent = 'Read more →';
+  }
+}
+
+// Initialize all articles to be collapsed
+document.addEventListener('DOMContentLoaded', function() {
+  // This ensures all articles start collapsed (they already are via inline style)
+});
+
+// ===== SUBSCRIPTION FORM =====
+function handleSubscribe(e) {
+  e.preventDefault();
+  
+  const emailInput = document.getElementById('emailInput');
+  const messageElement = document.getElementById('subscribeMessage');
+  
+  if (!emailInput.value || !emailInput.value.includes('@')) {
+    messageElement.textContent = 'Please enter a valid email address.';
+    messageElement.style.color = '#ef4444';
+    messageElement.style.display = 'block';
+    return;
+  }
+  
+  // Simulate API call
+  messageElement.textContent = 'Subscribing...';
+  messageElement.style.color = '#64748b';
+  messageElement.style.display = 'block';
+  
+  setTimeout(() => {
+    messageElement.textContent = '✅ Thank you for subscribing! Check your email for confirmation.';
+    messageElement.style.color = '#10b981';
+    emailInput.value = '';
+    
+    // Reset message after 5 seconds
+    setTimeout(() => {
+      messageElement.style.display = 'none';
+    }, 5000);
+  }, 1000);
+}
+
+// ===== TEMPLATE DOWNLOAD =====
+function downloadTemplate() {
+  // In a real implementation, this would trigger a file download
+  alert('📥 ATS Resume Template download would start here. In production, this would serve a PDF/DOCX file.');
+}
+
+// ===== MODAL CLOSE ON CLICK OUTSIDE =====
+window.onclick = function(event) {
+  const scannerModal = document.getElementById('scannerModal');
+  const premiumModal = document.getElementById('premiumModal');
+  
+  if (event.target === scannerModal) {
+    closeScanner();
+  }
+  
+  if (event.target === premiumModal) {
+    closePremiumModal();
+  }
+}
+
+// ===== SITEMAP INFO =====
+// Note: Actual sitemap generation happens via GitHub Actions
+// The workflow is defined in .github/workflows/sitemap.yml
+console.log('ResumeSmartBuild - Sitemap auto-generated via GitHub Actions');
+
+// ===== ADDITIONAL FUNCTIONS =====
+function showPrivacyModal() {
+  alert('Privacy Policy: We value your privacy. We do not sell your data. Full policy available upon request.');
+}
+
+function showTermsModal() {
+  alert('Terms of Service: By using our services, you agree to our terms. Full terms available upon request.');
+}
+
+// ===== ENHANCE USER EXPERIENCE =====
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Add animation on scroll (simple implementation)
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+// Observe tools and pricing cards for animation
+document.querySelectorAll('.tool, .pricing-plan').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+</script>
 </body>
 </html>
